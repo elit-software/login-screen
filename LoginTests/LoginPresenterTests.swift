@@ -33,4 +33,13 @@ class LoginPresenterTests: XCTestCase {
 
         XCTAssert(service.areCredentialsValidCalled)
     }
+
+    func testWhenCredentialsAreValidShowCredentialsAreValid() {
+        let view = SpyLoginView(credentials: notEmptyCredentials)
+        let presenter = LoginPresenter(view: view, service: service)
+
+        presenter.login()
+
+        XCTAssert(view.showCredentialsAreValidCalled)
+    }
 }
