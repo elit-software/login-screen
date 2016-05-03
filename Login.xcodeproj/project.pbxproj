@@ -12,7 +12,7 @@
 		EA129BFF1CD2381C003DBD34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA129BFD1CD2381C003DBD34 /* Main.storyboard */; };
 		EA129C011CD2381C003DBD34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA129C001CD2381C003DBD34 /* Assets.xcassets */; };
 		EA129C041CD2381C003DBD34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA129C021CD2381C003DBD34 /* LaunchScreen.storyboard */; };
-		EA129C0F1CD2381C003DBD34 /* LoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA129C0E1CD2381C003DBD34 /* LoginTests.swift */; };
+		EA129C0F1CD2381C003DBD34 /* LoginPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA129C0E1CD2381C003DBD34 /* LoginPresenterTests.swift */; };
 		EA129C1A1CD2381C003DBD34 /* LoginUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA129C191CD2381C003DBD34 /* LoginUITests.swift */; };
 		EA5350141CD8C65D0041381F /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5350131CD8C65D0041381F /* LoginPresenter.swift */; };
 		EA5350171CD8C6910041381F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5350161CD8C6910041381F /* LoginView.swift */; };
@@ -48,7 +48,7 @@
 		EA129C031CD2381C003DBD34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA129C051CD2381C003DBD34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA129C0A1CD2381C003DBD34 /* LoginTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoginTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA129C0E1CD2381C003DBD34 /* LoginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = LoginTests.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		EA129C0E1CD2381C003DBD34 /* LoginPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = LoginPresenterTests.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		EA129C101CD2381C003DBD34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA129C151CD2381C003DBD34 /* LoginUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoginUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA129C191CD2381C003DBD34 /* LoginUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUITests.swift; sourceTree = "<group>"; };
@@ -122,7 +122,7 @@
 		EA129C0D1CD2381C003DBD34 /* LoginTests */ = {
 			isa = PBXGroup;
 			children = (
-				EA129C0E1CD2381C003DBD34 /* LoginTests.swift */,
+				EA129C0E1CD2381C003DBD34 /* LoginPresenterTests.swift */,
 				EA53501C1CD8CC7D0041381F /* SpyLoginView.swift */,
 				EA53501E1CD8CC9E0041381F /* SpyLoginService.swift */,
 				EA5350211CD8CCC50041381F /* Supporting Files */,
@@ -313,7 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA53501F1CD8CC9E0041381F /* SpyLoginService.swift in Sources */,
-				EA129C0F1CD2381C003DBD34 /* LoginTests.swift in Sources */,
+				EA129C0F1CD2381C003DBD34 /* LoginPresenterTests.swift in Sources */,
 				EA53501D1CD8CC7D0041381F /* SpyLoginView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

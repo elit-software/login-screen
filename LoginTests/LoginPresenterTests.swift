@@ -1,7 +1,7 @@
 import XCTest
 @testable import Login
 
-class LoginTests: XCTestCase {
+class LoginPresenterTests: XCTestCase {
 
     let service = SpyLoginService()
     let emptyCredentials = Credentials(username: "", password: "")
