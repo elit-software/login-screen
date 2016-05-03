@@ -11,8 +11,18 @@ class LoginTests: XCTestCase {
         XCTAssert(view.showUsernameIsEmptyCalled)
     }
 
+    func testWhenPasswordIsEmptyShowPasswordIsEmpty() {
+        let view = SpyLoginView()
+        let presenter = LoginPresenter(view: view)
+
+        presenter.login()
+
+        XCTAssert(view.showPasswordIsEmptyCalled)
+    }
+
     class SpyLoginView: LoginView {
         var showUsernameIsEmptyCalled = false
+        var showPasswordIsEmptyCalled = false
 
         var credentials: Credentials {
             return Credentials(username: "", password: "")
@@ -20,6 +30,10 @@ class LoginTests: XCTestCase {
 
         func showUsernameIsEmpty() {
             showUsernameIsEmptyCalled = true
+        }
+
+        func showPasswordIsEmpty() {
+            showPasswordIsEmptyCalled = true
         }
     }
 }

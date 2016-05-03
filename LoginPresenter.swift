@@ -9,5 +9,8 @@ class LoginPresenter {
         if view.credentials.username.isEmpty {
             view.showUsernameIsEmpty()
         }
+        if view.credentials.password.isEmpty {
+            view.showPasswordIsEmpty()
+        }
     }
 }
