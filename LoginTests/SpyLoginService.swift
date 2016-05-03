@@ -2,9 +2,10 @@
 
 class SpyLoginService: LoginService {
     var areCredentialsValidCalled = false
+    var credentialsAreValid = false
 
     func areCredentialsValid(credentials: Credentials, delegate: LoginServiceDelegate) {
         areCredentialsValidCalled = true
-        delegate.credentialsAreValid()
+        credentialsAreValid ? delegate.credentialsAreValid() : delegate.credentialsAreNotValid()
     }
 }

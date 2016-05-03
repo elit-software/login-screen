@@ -26,4 +26,8 @@ class LoginPresenter: LoginServiceDelegate {
     func credentialsAreValid() {
         view.showCredentialsAreValid()
     }
+
+    func credentialsAreNotValid() {
+        view.showCredentialsAreNotValid()
+    }
 }

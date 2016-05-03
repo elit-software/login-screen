@@ -3,4 +3,5 @@ protocol LoginView {
     func showUsernameIsEmpty()
     func showPasswordIsEmpty()
     func showCredentialsAreValid()
+    func showCredentialsAreNotValid()
 }
