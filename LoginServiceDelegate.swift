@@ -1,0 +1,3 @@
+protocol LoginServiceDelegate {
+    func credentialsAreValid()
+}

@@ -1,4 +1,4 @@
-class LoginPresenter {
+class LoginPresenter: LoginServiceDelegate {
     let view: LoginView
     let service: LoginService
 
@@ -19,7 +19,11 @@ class LoginPresenter {
         }
 
         if credentials.areValid {
-            service.areCredentialsValid(credentials)
+            service.areCredentialsValid(credentials, delegate: self)
         }
+    }
+
+    func credentialsAreValid() {
+        view.showCredentialsAreValid()
     }
 }

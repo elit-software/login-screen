@@ -20,6 +20,7 @@
 		EA53501B1CD8CA4A0041381F /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA53501A1CD8CA4A0041381F /* LoginService.swift */; };
 		EA53501D1CD8CC7D0041381F /* SpyLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA53501C1CD8CC7D0041381F /* SpyLoginView.swift */; };
 		EA53501F1CD8CC9E0041381F /* SpyLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA53501E1CD8CC9E0041381F /* SpyLoginService.swift */; };
+		EA5350271CD8D0190041381F /* LoginServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5350251CD8CFDB0041381F /* LoginServiceDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		EA53501A1CD8CA4A0041381F /* LoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		EA53501C1CD8CC7D0041381F /* SpyLoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpyLoginView.swift; sourceTree = "<group>"; };
 		EA53501E1CD8CC9E0041381F /* SpyLoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpyLoginService.swift; sourceTree = "<group>"; };
+		EA5350251CD8CFDB0041381F /* LoginServiceDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginServiceDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,9 +124,7 @@
 		EA129C0D1CD2381C003DBD34 /* LoginTests */ = {
 			isa = PBXGroup;
 			children = (
-				EA129C0E1CD2381C003DBD34 /* LoginPresenterTests.swift */,
-				EA53501C1CD8CC7D0041381F /* SpyLoginView.swift */,
-				EA53501E1CD8CC9E0041381F /* SpyLoginService.swift */,
+				EA5350221CD8CEF10041381F /* Login Presenter */,
 				EA5350211CD8CCC50041381F /* Supporting Files */,
 			);
 			path = LoginTests;
@@ -146,6 +146,7 @@
 				EA5350161CD8C6910041381F /* LoginView.swift */,
 				EA5350181CD8C77B0041381F /* Credentials.swift */,
 				EA53501A1CD8CA4A0041381F /* LoginService.swift */,
+				EA5350251CD8CFDB0041381F /* LoginServiceDelegate.swift */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -166,6 +167,16 @@
 				EA129C101CD2381C003DBD34 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EA5350221CD8CEF10041381F /* Login Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				EA129C0E1CD2381C003DBD34 /* LoginPresenterTests.swift */,
+				EA53501C1CD8CC7D0041381F /* SpyLoginView.swift */,
+				EA53501E1CD8CC9E0041381F /* SpyLoginService.swift */,
+			);
+			name = "Login Presenter";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,6 +316,7 @@
 				EA5350191CD8C77B0041381F /* Credentials.swift in Sources */,
 				EA5350171CD8C6910041381F /* LoginView.swift in Sources */,
 				EA129BFA1CD2381C003DBD34 /* AppDelegate.swift in Sources */,
+				EA5350271CD8D0190041381F /* LoginServiceDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
