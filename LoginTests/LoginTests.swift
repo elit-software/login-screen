@@ -13,5 +13,13 @@ class LoginTests: XCTestCase {
 
     class SpyLoginView: LoginView {
         var showUsernameIsEmptyCalled = false
+
+        var credentials: Credentials {
+            return Credentials(username: "", password: "")
+        }
+
+        func showUsernameIsEmpty() {
+            showUsernameIsEmptyCalled = true
+        }
     }
 }

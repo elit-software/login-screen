@@ -6,5 +6,8 @@ class LoginPresenter {
     }
 
     func login() {
+        if view.credentials.username.isEmpty {
+            view.showUsernameIsEmpty()
+        }
     }
 }
