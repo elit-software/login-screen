@@ -18,7 +18,7 @@ class LoginPresenter {
             view.showPasswordIsEmpty()
         }
 
-        if !credentials.username.isEmpty && !credentials.password.isEmpty {
+        if credentials.areValid {
             service.areCredentialsValid(credentials)
         }
     }
