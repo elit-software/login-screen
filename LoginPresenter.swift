@@ -1,16 +1,25 @@
 class LoginPresenter {
     let view: LoginView
+    let service: LoginService
 
-    init(view: LoginView) {
+    init(view: LoginView, service: LoginService) {
         self.view = view
+        self.service = service
     }
 
     func login() {
-        if view.credentials.username.isEmpty {
+        let credentials = view.credentials
+
+        if credentials.username.isEmpty {
             view.showUsernameIsEmpty()
         }
-        if view.credentials.password.isEmpty {
+
+        if credentials.password.isEmpty {
             view.showPasswordIsEmpty()
+        }
+
+        if !credentials.username.isEmpty && !credentials.password.isEmpty {
+            service.areCredentialsValid(credentials)
         }
     }
 }

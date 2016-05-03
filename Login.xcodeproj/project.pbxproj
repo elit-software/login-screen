@@ -17,6 +17,7 @@
 		EA5350141CD8C65D0041381F /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5350131CD8C65D0041381F /* LoginPresenter.swift */; };
 		EA5350171CD8C6910041381F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5350161CD8C6910041381F /* LoginView.swift */; };
 		EA5350191CD8C77B0041381F /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5350181CD8C77B0041381F /* Credentials.swift */; };
+		EA53501B1CD8CA4A0041381F /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA53501A1CD8CA4A0041381F /* LoginService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,14 +46,15 @@
 		EA129C031CD2381C003DBD34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA129C051CD2381C003DBD34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA129C0A1CD2381C003DBD34 /* LoginTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoginTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA129C0E1CD2381C003DBD34 /* LoginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTests.swift; sourceTree = "<group>"; };
+		EA129C0E1CD2381C003DBD34 /* LoginTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = LoginTests.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		EA129C101CD2381C003DBD34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA129C151CD2381C003DBD34 /* LoginUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoginUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA129C191CD2381C003DBD34 /* LoginUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUITests.swift; sourceTree = "<group>"; };
 		EA129C1B1CD2381C003DBD34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EA5350131CD8C65D0041381F /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
-		EA5350161CD8C6910041381F /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		EA5350131CD8C65D0041381F /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = LoginPresenter.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		EA5350161CD8C6910041381F /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = LoginView.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		EA5350181CD8C77B0041381F /* Credentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
+		EA53501A1CD8CA4A0041381F /* LoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 				EA5350131CD8C65D0041381F /* LoginPresenter.swift */,
 				EA5350161CD8C6910041381F /* LoginView.swift */,
 				EA5350181CD8C77B0041381F /* Credentials.swift */,
+				EA53501A1CD8CA4A0041381F /* LoginService.swift */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA5350141CD8C65D0041381F /* LoginPresenter.swift in Sources */,
+				EA53501B1CD8CA4A0041381F /* LoginService.swift in Sources */,
 				EA129BFC1CD2381C003DBD34 /* ViewController.swift in Sources */,
 				EA5350191CD8C77B0041381F /* Credentials.swift in Sources */,
 				EA5350171CD8C6910041381F /* LoginView.swift in Sources */,
