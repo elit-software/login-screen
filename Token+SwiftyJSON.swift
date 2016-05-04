@@ -1,9 +1,14 @@
-//
-//  Token+SwiftyJSON.swift
-//  Login
-//
-//  Created by Tiago Martinho on 04/05/16.
-//  Copyright © 2016 tm. All rights reserved.
-//
+import SwiftyJSON
 
-import Foundation
+extension Token {
+
+    init(data: NSData?) {
+        let data = data ?? NSData()
+        let json = JSON(data: data)
+        self.init(json: json)
+    }
+
+    init(json: JSON) {
+        self.token = json["token"].stringValue
+    }
+}

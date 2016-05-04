@@ -1,9 +1,15 @@
-//
-//  SpyLoginServiceDelegate.swift
-//  Login
-//
-//  Created by Tiago Martinho on 04/05/16.
-//  Copyright © 2016 tm. All rights reserved.
-//
+@testable import Login
 
-import Foundation
+class SpyLoginServiceDelegate: LoginServiceDelegate {
+
+    var credentialsAreValidCalled = false
+    var credentialsAreNotValidCalled = false
+
+    func credentialsAreValid() {
+        credentialsAreValidCalled = true
+    }
+
+    func credentialsAreNotValid() {
+        credentialsAreNotValidCalled = true
+    }
+}

@@ -1,9 +1,19 @@
-//
-//  RemoteLoginService.swift
-//  Login
-//
-//  Created by Tiago Martinho on 04/05/16.
-//  Copyright © 2016 tm. All rights reserved.
-//
-
 import Foundation
+
+protocol RemoteLoginService: LoginService {
+    func get(url: String, credentials: Credentials, callback: NSData? -> Void)
+}
+
+extension RemoteLoginService {
+
+    var authenticationURL: String {
+        return "http://private-c387d-login239.apiary-mock.com/authentication"
+    }
+
+    func areCredentialsValid(credentials: Credentials, delegate: LoginServiceDelegate) {
+        get(authenticationURL, credentials: credentials) { data in
+            let token = Token(data: data)
+            token.isEmpty ? delegate.credentialsAreNotValid() : delegate.credentialsAreValid()
+        }
+    }
+}

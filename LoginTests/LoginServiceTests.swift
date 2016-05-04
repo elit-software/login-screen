@@ -1,35 +1,24 @@
-//
-//  LoginServiceTests.swift
-//  Login
-//
-//  Created by Tiago Martinho on 04/05/16.
-//  Copyright © 2016 tm. All rights reserved.
-//
-
 import XCTest
+@testable import Login
 
 class LoginServiceTests: XCTestCase {
 
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
+    let emptyCredentials = Credentials(username: "", password: "")
+    let delegate = SpyLoginServiceDelegate()
+
+    func testWhenTokenIsEmptyCredentialsAreNotValid() {
+        let service = FakeRemoteLoginService(validCredentials: false)
+
+        service.areCredentialsValid(emptyCredentials, delegate: delegate)
+
+        XCTAssert(delegate.credentialsAreNotValidCalled)
     }
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
+    func testWhenTokenIsNotEmptyCredentialsAreValid() {
+        let service = FakeRemoteLoginService(validCredentials: true)
 
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock {
-            // Put the code you want to measure the time of here.
-        }
-    }
+        service.areCredentialsValid(emptyCredentials, delegate: delegate)
 
+        XCTAssert(delegate.credentialsAreValidCalled)
+    }
 }

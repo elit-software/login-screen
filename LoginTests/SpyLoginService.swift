@@ -1,6 +1,7 @@
 @testable import Login
 
 class SpyLoginService: LoginService {
+
     var areCredentialsValidCalled = false
     var credentialsAreValid = false
 

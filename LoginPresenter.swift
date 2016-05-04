@@ -1,4 +1,5 @@
 class LoginPresenter: LoginServiceDelegate {
+
     let view: LoginView
     let service: LoginService
 

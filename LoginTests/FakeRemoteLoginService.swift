@@ -1,9 +1,21 @@
-//
-//  FakeRemoteLoginService.swift
-//  Login
-//
-//  Created by Tiago Martinho on 04/05/16.
-//  Copyright © 2016 tm. All rights reserved.
-//
-
 import Foundation
+@testable import Login
+
+class FakeRemoteLoginService: RemoteLoginService {
+
+    let validCredentials: Bool
+
+    init(validCredentials: Bool) {
+        self.validCredentials = validCredentials
+    }
+
+    func get(url: String, credentials: Credentials, callback: NSData? -> Void) {
+        if validCredentials {
+            let jsonString = "{\"token\":\"A_TOKEN\"}"
+            let data = jsonString.dataUsingEncoding(NSUTF8StringEncoding)
+            callback(data)
+        } else {
+            callback(nil)
+        }
+    }
+}
