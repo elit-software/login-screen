@@ -8,7 +8,7 @@ class SpyLoginView: LoginView {
 
     var credentials: Credentials
 
-    init(credentials: Credentials){
+    init(credentials: Credentials) {
         self.credentials = credentials
     }
 
