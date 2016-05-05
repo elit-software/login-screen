@@ -32,6 +32,7 @@
 		EA6F4EFF1CDA1D42001F764E /* RemoteLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6F4EFE1CDA1D42001F764E /* RemoteLoginService.swift */; };
 		EAA7DEF81CDA622600BEF317 /* FakeRemoteLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA7DEF71CDA622600BEF317 /* FakeRemoteLoginService.swift */; };
 		EAA7DEFA1CDA625000BEF317 /* SpyLoginServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA7DEF91CDA625000BEF317 /* SpyLoginServiceDelegate.swift */; };
+		EAC0A6711CDBA8CC000CB230 /* LoginViewController+LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC0A6701CDBA8CC000CB230 /* LoginViewController+LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		EA6F4EFE1CDA1D42001F764E /* RemoteLoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteLoginService.swift; sourceTree = "<group>"; };
 		EAA7DEF71CDA622600BEF317 /* FakeRemoteLoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeRemoteLoginService.swift; sourceTree = "<group>"; };
 		EAA7DEF91CDA625000BEF317 /* SpyLoginServiceDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpyLoginServiceDelegate.swift; sourceTree = "<group>"; };
+		EAC0A6701CDBA8CC000CB230 /* LoginViewController+LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoginViewController+LoginView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 			children = (
 				EA129BF91CD2381C003DBD34 /* AppDelegate.swift */,
 				EA129BFB1CD2381C003DBD34 /* LoginViewController.swift */,
+				EAC0A6701CDBA8CC000CB230 /* LoginViewController+LoginView.swift */,
 				EA261B301CDB725C006AD9D6 /* Login Service */,
 				EA129BFD1CD2381C003DBD34 /* Main.storyboard */,
 				EA261B2F1CDB724A006AD9D6 /* Utilities */,
@@ -475,6 +478,7 @@
 				EA5350191CD8C77B0041381F /* Credentials.swift in Sources */,
 				EA5350171CD8C6910041381F /* LoginView.swift in Sources */,
 				EA129BFA1CD2381C003DBD34 /* AppDelegate.swift in Sources */,
+				EAC0A6711CDBA8CC000CB230 /* LoginViewController+LoginView.swift in Sources */,
 				EA5350271CD8D0190041381F /* LoginServiceDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
