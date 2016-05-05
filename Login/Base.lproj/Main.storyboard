@@ -35,6 +35,9 @@
                                     <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kUv-b8-Rhg"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="IPc-fG-BcL">
+                                <rect key="frame" x="290" y="153" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -44,12 +47,16 @@
                             <constraint firstItem="RJA-mD-LBo" firstAttribute="top" secondItem="X4h-5T-BtL" secondAttribute="bottom" constant="8" symbolic="YES" id="MjK-Ja-5gT"/>
                             <constraint firstItem="RJA-mD-LBo" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="PZN-jE-942"/>
                             <constraint firstItem="G6H-W9-zY9" firstAttribute="top" secondItem="RJA-mD-LBo" secondAttribute="bottom" constant="8" symbolic="YES" id="bAY-Bm-V8g"/>
+                            <constraint firstItem="IPc-fG-BcL" firstAttribute="centerY" secondItem="G6H-W9-zY9" secondAttribute="centerY" id="cOK-mh-AIq"/>
                             <constraint firstItem="X4h-5T-BtL" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="udg-zc-zWt"/>
+                            <constraint firstItem="IPc-fG-BcL" firstAttribute="centerX" secondItem="G6H-W9-zY9" secondAttribute="centerX" id="wAQ-Mk-QlQ"/>
                             <constraint firstItem="X4h-5T-BtL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="z0M-80-2hP"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Login" id="pxm-4P-dRt"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="IPc-fG-BcL" id="192-HC-pu0"/>
+                        <outlet property="loginButton" destination="G6H-W9-zY9" id="smn-5B-s80"/>
                         <outlet property="password" destination="RJA-mD-LBo" id="Y4E-W3-5vI"/>
                         <outlet property="username" destination="X4h-5T-BtL" id="GFL-k2-vkT"/>
                         <segue destination="sno-Ls-x8i" kind="presentation" identifier="Main" id="zcq-fC-Eoc"/>

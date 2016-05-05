@@ -4,6 +4,8 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var loginButton: UIButton!
 
     var presenter: LoginPresenter?
 
@@ -41,6 +43,7 @@ extension LoginViewController: LoginView {
     }
 
     func showLoadingInterface() {
-        
+        loginButton.hidden = true
+        activityIndicator.startAnimating()
     }
 }
