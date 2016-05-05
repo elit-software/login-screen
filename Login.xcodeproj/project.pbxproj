@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		BA32D1AA31734BA9D4FA3C27 /* Pods_Login.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56AE20EA07AA354F28FCF911 /* Pods_Login.framework */; };
 		EA129BFA1CD2381C003DBD34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA129BF91CD2381C003DBD34 /* AppDelegate.swift */; };
-		EA129BFC1CD2381C003DBD34 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA129BFB1CD2381C003DBD34 /* ViewController.swift */; };
+		EA129BFC1CD2381C003DBD34 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA129BFB1CD2381C003DBD34 /* LoginViewController.swift */; };
 		EA129BFF1CD2381C003DBD34 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA129BFD1CD2381C003DBD34 /* Main.storyboard */; };
 		EA129C011CD2381C003DBD34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA129C001CD2381C003DBD34 /* Assets.xcassets */; };
 		EA129C041CD2381C003DBD34 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA129C021CD2381C003DBD34 /* LaunchScreen.storyboard */; };
@@ -57,7 +57,7 @@
 		8BB3F6BA8A84DA818C9835B3 /* Pods-Login.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Login.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Login/Pods-Login.debug.xcconfig"; sourceTree = "<group>"; };
 		EA129BF61CD2381C003DBD34 /* Login.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Login.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA129BF91CD2381C003DBD34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EA129BFB1CD2381C003DBD34 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EA129BFB1CD2381C003DBD34 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = LoginViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		EA129BFE1CD2381C003DBD34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EA129C001CD2381C003DBD34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA129C031CD2381C003DBD34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -70,7 +70,7 @@
 		EA129C1B1CD2381C003DBD34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA261B291CDB6DF5006AD9D6 /* LoginServiceFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginServiceFactory.swift; sourceTree = "<group>"; };
 		EA261B2B1CDB6ED7006AD9D6 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
-		EA261B2D1CDB70C9006AD9D6 /* AlertUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertUtilities.swift; sourceTree = "<group>"; };
+		EA261B2D1CDB70C9006AD9D6 /* AlertUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = AlertUtilities.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		EA39720B1CDA1F2900E7898E /* AlamofireLoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlamofireLoginService.swift; path = ../AlamofireLoginService.swift; sourceTree = "<group>"; };
 		EA39720D1CDA219A00E7898E /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		EA39720F1CDA21B100E7898E /* Token+SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Token+SwiftyJSON.swift"; path = "../Token+SwiftyJSON.swift"; sourceTree = "<group>"; };
@@ -157,7 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				EA129BF91CD2381C003DBD34 /* AppDelegate.swift */,
-				EA129BFB1CD2381C003DBD34 /* ViewController.swift */,
+				EA129BFB1CD2381C003DBD34 /* LoginViewController.swift */,
 				EA39720F1CDA21B100E7898E /* Token+SwiftyJSON.swift */,
 				EA39720B1CDA1F2900E7898E /* AlamofireLoginService.swift */,
 				EA129BFD1CD2381C003DBD34 /* Main.storyboard */,
@@ -453,7 +453,7 @@
 				EA6F4EFF1CDA1D42001F764E /* RemoteLoginService.swift in Sources */,
 				EA53501B1CD8CA4A0041381F /* LoginService.swift in Sources */,
 				EA39720C1CDA1F2900E7898E /* AlamofireLoginService.swift in Sources */,
-				EA129BFC1CD2381C003DBD34 /* ViewController.swift in Sources */,
+				EA129BFC1CD2381C003DBD34 /* LoginViewController.swift in Sources */,
 				EA261B2C1CDB6ED7006AD9D6 /* UITextFieldExtension.swift in Sources */,
 				EA3972101CDA21B100E7898E /* Token+SwiftyJSON.swift in Sources */,
 				EA5350191CD8C77B0041381F /* Credentials.swift in Sources */,
