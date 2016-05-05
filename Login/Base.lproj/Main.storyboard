@@ -31,6 +31,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G6H-W9-zY9">
                                 <rect key="frame" x="281" y="148" width="38" height="30"/>
                                 <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kUv-b8-Rhg"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -46,6 +49,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Login" id="pxm-4P-dRt"/>
+                    <connections>
+                        <outlet property="password" destination="RJA-mD-LBo" id="Y4E-W3-5vI"/>
+                        <outlet property="username" destination="X4h-5T-BtL" id="GFL-k2-vkT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
