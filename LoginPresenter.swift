@@ -26,10 +26,12 @@ class LoginPresenter: LoginServiceDelegate {
     }
 
     func credentialsAreValid() {
+        view.hideLoadingInterface()
         view.showCredentialsAreValid()
     }
 
     func credentialsAreNotValid() {
+        view.hideLoadingInterface()
         view.showCredentialsAreNotValid()
     }
 }

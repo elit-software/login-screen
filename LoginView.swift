@@ -5,4 +5,5 @@ protocol LoginView {
     func showCredentialsAreValid()
     func showCredentialsAreNotValid()
     func showLoadingInterface()
+    func hideLoadingInterface()
 }

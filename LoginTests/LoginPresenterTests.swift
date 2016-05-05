@@ -63,4 +63,14 @@ class LoginPresenterTests: XCTestCase {
 
         XCTAssert(view.showLoadingInterfaceCalled)
     }
+
+    func testWhenVerifyingCredentialsEndsHidesLoadingInterface() {
+        let view = SpyLoginView(credentials: notEmptyCredentials)
+        service.credentialsAreValid = false
+        let presenter = LoginPresenter(view: view, service: service)
+
+        presenter.login()
+
+        XCTAssert(view.hideLoadingInterfaceCalled)
+    }
 }

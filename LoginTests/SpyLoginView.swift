@@ -7,6 +7,7 @@ class SpyLoginView: LoginView {
     var showCredentialsAreValidCalled = false
     var showCredentialsAreNotValidCalled = false
     var showLoadingInterfaceCalled = false
+    var hideLoadingInterfaceCalled = false
 
     let credentials: Credentials
 
@@ -32,5 +33,9 @@ class SpyLoginView: LoginView {
 
     func showLoadingInterface() {
         showLoadingInterfaceCalled = true
+    }
+
+    func hideLoadingInterface() {
+        hideLoadingInterfaceCalled = true
     }
 }

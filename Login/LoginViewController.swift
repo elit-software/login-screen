@@ -46,4 +46,9 @@ extension LoginViewController: LoginView {
         loginButton.hidden = true
         activityIndicator.startAnimating()
     }
+
+    func hideLoadingInterface() {
+        loginButton.hidden = false
+        activityIndicator.stopAnimating()
+    }
 }
