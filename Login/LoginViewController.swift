@@ -33,7 +33,7 @@ extension LoginViewController: LoginView {
     }
 
     func showCredentialsAreValid() {
-
+        performSegueWithIdentifier("Main", sender: self)
     }
 
     func showCredentialsAreNotValid() {

@@ -158,13 +158,10 @@
 			children = (
 				EA129BF91CD2381C003DBD34 /* AppDelegate.swift */,
 				EA129BFB1CD2381C003DBD34 /* LoginViewController.swift */,
-				EA39720F1CDA21B100E7898E /* Token+SwiftyJSON.swift */,
-				EA39720B1CDA1F2900E7898E /* AlamofireLoginService.swift */,
+				EA261B301CDB725C006AD9D6 /* Login Service */,
 				EA129BFD1CD2381C003DBD34 /* Main.storyboard */,
+				EA261B2F1CDB724A006AD9D6 /* Utilities */,
 				EA5350201CD8CCBC0041381F /* Supporting Files */,
-				EA261B291CDB6DF5006AD9D6 /* LoginServiceFactory.swift */,
-				EA261B2B1CDB6ED7006AD9D6 /* UITextFieldExtension.swift */,
-				EA261B2D1CDB70C9006AD9D6 /* AlertUtilities.swift */,
 			);
 			name = "Login iOS";
 			path = Login;
@@ -187,6 +184,25 @@
 				EA129C1B1CD2381C003DBD34 /* Info.plist */,
 			);
 			path = LoginUITests;
+			sourceTree = "<group>";
+		};
+		EA261B2F1CDB724A006AD9D6 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				EA261B2B1CDB6ED7006AD9D6 /* UITextFieldExtension.swift */,
+				EA261B2D1CDB70C9006AD9D6 /* AlertUtilities.swift */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		EA261B301CDB725C006AD9D6 /* Login Service */ = {
+			isa = PBXGroup;
+			children = (
+				EA39720F1CDA21B100E7898E /* Token+SwiftyJSON.swift */,
+				EA261B291CDB6DF5006AD9D6 /* LoginServiceFactory.swift */,
+				EA39720B1CDA1F2900E7898E /* AlamofireLoginService.swift */,
+			);
+			name = "Login Service";
 			sourceTree = "<group>";
 		};
 		EA5350151CD8C6600041381F /* Login */ = {

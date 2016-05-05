@@ -52,6 +52,7 @@
                     <connections>
                         <outlet property="password" destination="RJA-mD-LBo" id="Y4E-W3-5vI"/>
                         <outlet property="username" destination="X4h-5T-BtL" id="GFL-k2-vkT"/>
+                        <segue destination="sno-Ls-x8i" kind="presentation" identifier="Main" id="zcq-fC-Eoc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -75,6 +76,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SXC-LL-l8N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="264" y="241"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="yJa-jt-8PG">
+            <objects>
+                <viewController id="sno-Ls-x8i" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZRy-Vh-9M0"/>
+                        <viewControllerLayoutGuide type="bottom" id="vtI-MX-c5d"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0MS-9f-iCK">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="42" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DHK-Bp-3jS">
+                                <rect key="frame" x="290" y="289" width="21" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DHK-Bp-3jS" firstAttribute="centerY" secondItem="0MS-9f-iCK" secondAttribute="centerY" id="EGA-Vk-bo1"/>
+                            <constraint firstItem="DHK-Bp-3jS" firstAttribute="centerX" secondItem="0MS-9f-iCK" secondAttribute="centerX" id="be7-HF-CVr"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GTU-u9-2bx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1655" y="241"/>
         </scene>
     </scenes>
 </document>
