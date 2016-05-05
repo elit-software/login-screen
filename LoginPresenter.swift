@@ -20,6 +20,7 @@ class LoginPresenter: LoginServiceDelegate {
         }
 
         if credentials.areValid {
+            view.showLoadingInterface()
             service.areCredentialsValid(credentials, delegate: self)
         }
     }

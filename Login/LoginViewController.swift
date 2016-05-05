@@ -39,4 +39,8 @@ extension LoginViewController: LoginView {
     func showCredentialsAreNotValid() {
         AlertUtilities.displayAlertWithMessage("Credentials are not valid", InViewController: self)
     }
+
+    func showLoadingInterface() {
+        
+    }
 }

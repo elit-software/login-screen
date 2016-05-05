@@ -6,6 +6,8 @@ class SpyLoginView: LoginView {
     var showPasswordIsEmptyCalled = false
     var showCredentialsAreValidCalled = false
     var showCredentialsAreNotValidCalled = false
+    var showLoadingInterfaceCalled = false
+
     let credentials: Credentials
 
     init(credentials: Credentials) {
@@ -26,5 +28,9 @@ class SpyLoginView: LoginView {
 
     func showCredentialsAreNotValid() {
         showCredentialsAreNotValidCalled = true
+    }
+
+    func showLoadingInterface() {
+        showLoadingInterfaceCalled = true
     }
 }
