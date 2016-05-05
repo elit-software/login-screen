@@ -1,15 +1,11 @@
 import UIKit
 
-class ViewController: UIViewController, LoginView {
+class ViewController: UIViewController {
 
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!
 
     var presenter: LoginPresenter?
-
-    var credentials: Credentials {
-        return Credentials(username: username.text ?? "", password: password.text ?? "")
-    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,13 +16,20 @@ class ViewController: UIViewController, LoginView {
     @IBAction func login(sender: UIButton) {
         presenter?.login()
     }
+}
+
+extension ViewController: LoginView {
+
+    var credentials: Credentials {
+        return Credentials(username: username.text ?? "", password: password.text ?? "")
+    }
 
     func showUsernameIsEmpty() {
-
+        username.flashBackgroundWithRed()
     }
 
     func showPasswordIsEmpty() {
-
+        password.flashBackgroundWithRed()
     }
 
     func showCredentialsAreValid() {
@@ -34,6 +37,6 @@ class ViewController: UIViewController, LoginView {
     }
 
     func showCredentialsAreNotValid() {
-
+        AlertUtilities.displayAlertWithMessage("Credentials are not valid", InViewController: self)
     }
 }

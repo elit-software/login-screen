@@ -17,6 +17,7 @@
 		EA129C1A1CD2381C003DBD34 /* LoginUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA129C191CD2381C003DBD34 /* LoginUITests.swift */; };
 		EA261B2A1CDB6DF5006AD9D6 /* LoginServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA261B291CDB6DF5006AD9D6 /* LoginServiceFactory.swift */; };
 		EA261B2C1CDB6ED7006AD9D6 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA261B2B1CDB6ED7006AD9D6 /* UITextFieldExtension.swift */; };
+		EA261B2E1CDB70C9006AD9D6 /* AlertUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA261B2D1CDB70C9006AD9D6 /* AlertUtilities.swift */; };
 		EA39720C1CDA1F2900E7898E /* AlamofireLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA39720B1CDA1F2900E7898E /* AlamofireLoginService.swift */; };
 		EA39720E1CDA219A00E7898E /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA39720D1CDA219A00E7898E /* Token.swift */; };
 		EA3972101CDA21B100E7898E /* Token+SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA39720F1CDA21B100E7898E /* Token+SwiftyJSON.swift */; };
@@ -69,6 +70,7 @@
 		EA129C1B1CD2381C003DBD34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA261B291CDB6DF5006AD9D6 /* LoginServiceFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginServiceFactory.swift; sourceTree = "<group>"; };
 		EA261B2B1CDB6ED7006AD9D6 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
+		EA261B2D1CDB70C9006AD9D6 /* AlertUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertUtilities.swift; sourceTree = "<group>"; };
 		EA39720B1CDA1F2900E7898E /* AlamofireLoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AlamofireLoginService.swift; path = ../AlamofireLoginService.swift; sourceTree = "<group>"; };
 		EA39720D1CDA219A00E7898E /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		EA39720F1CDA21B100E7898E /* Token+SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Token+SwiftyJSON.swift"; path = "../Token+SwiftyJSON.swift"; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				EA5350201CD8CCBC0041381F /* Supporting Files */,
 				EA261B291CDB6DF5006AD9D6 /* LoginServiceFactory.swift */,
 				EA261B2B1CDB6ED7006AD9D6 /* UITextFieldExtension.swift */,
+				EA261B2D1CDB70C9006AD9D6 /* AlertUtilities.swift */,
 			);
 			name = "Login iOS";
 			path = Login;
@@ -446,6 +449,7 @@
 				EA5350141CD8C65D0041381F /* LoginPresenter.swift in Sources */,
 				EA39720E1CDA219A00E7898E /* Token.swift in Sources */,
 				EA261B2A1CDB6DF5006AD9D6 /* LoginServiceFactory.swift in Sources */,
+				EA261B2E1CDB70C9006AD9D6 /* AlertUtilities.swift in Sources */,
 				EA6F4EFF1CDA1D42001F764E /* RemoteLoginService.swift in Sources */,
 				EA53501B1CD8CA4A0041381F /* LoginService.swift in Sources */,
 				EA39720C1CDA1F2900E7898E /* AlamofireLoginService.swift in Sources */,
