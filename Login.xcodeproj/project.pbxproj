@@ -174,8 +174,8 @@
 			isa = PBXGroup;
 			children = (
 				EA5350221CD8CEF10041381F /* Login Presenter */,
-				EA5350211CD8CCC50041381F /* Supporting Files */,
 				EAA7DEFB1CDA62CC00BEF317 /* Login Service */,
+				EA5350211CD8CCC50041381F /* Supporting Files */,
 			);
 			path = LoginTests;
 			sourceTree = "<group>";
@@ -184,7 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				EA129C191CD2381C003DBD34 /* LoginUITests.swift */,
-				EA129C1B1CD2381C003DBD34 /* Info.plist */,
+				EAC0A6721CDBB034000CB230 /* Supporting Files */,
 			);
 			path = LoginUITests;
 			sourceTree = "<group>";
@@ -242,8 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				EA129C0E1CD2381C003DBD34 /* LoginPresenterTests.swift */,
-				EA53501C1CD8CC7D0041381F /* SpyLoginView.swift */,
-				EA53501E1CD8CC9E0041381F /* SpyLoginService.swift */,
+				EAC0A6731CDBB042000CB230 /* Spies */,
 			);
 			name = "Login Presenter";
 			sourceTree = "<group>";
@@ -262,10 +261,35 @@
 			isa = PBXGroup;
 			children = (
 				EA3972111CDA22A600E7898E /* LoginServiceTests.swift */,
+				EAC0A6741CDBB047000CB230 /* Spy and Fake */,
+			);
+			name = "Login Service";
+			sourceTree = "<group>";
+		};
+		EAC0A6721CDBB034000CB230 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EA129C1B1CD2381C003DBD34 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EAC0A6731CDBB042000CB230 /* Spies */ = {
+			isa = PBXGroup;
+			children = (
+				EA53501C1CD8CC7D0041381F /* SpyLoginView.swift */,
+				EA53501E1CD8CC9E0041381F /* SpyLoginService.swift */,
+			);
+			name = Spies;
+			sourceTree = "<group>";
+		};
+		EAC0A6741CDBB047000CB230 /* Spy and Fake */ = {
+			isa = PBXGroup;
+			children = (
 				EAA7DEF71CDA622600BEF317 /* FakeRemoteLoginService.swift */,
 				EAA7DEF91CDA625000BEF317 /* SpyLoginServiceDelegate.swift */,
 			);
-			name = "Login Service";
+			name = "Spy and Fake";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
