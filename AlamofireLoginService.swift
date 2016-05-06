@@ -2,7 +2,7 @@ import Alamofire
 
 class AlamofireLoginService: RemoteLoginService {
 
-    func get(url: String, credentials: Credentials, callback: NSData? -> Void) {
+    func get(url: String, credentials: Credentials, callback: AnyObject? -> Void) {
         let parameters = [
             "username": credentials.username,
             "password": credentials.password

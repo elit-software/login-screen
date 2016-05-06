@@ -1,7 +1,5 @@
-import Foundation
-
 protocol RemoteLoginService: LoginService {
-    func get(url: String, credentials: Credentials, callback: NSData? -> Void)
+    func get(url: String, credentials: Credentials, callback: AnyObject? -> Void)
 }
 
 extension RemoteLoginService {
