@@ -5,7 +5,7 @@ def appDependencies
     pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
 end
 
-target 'Login iOS' do
+target 'Login' do
     platform :ios, '8.0'
     appDependencies
 end

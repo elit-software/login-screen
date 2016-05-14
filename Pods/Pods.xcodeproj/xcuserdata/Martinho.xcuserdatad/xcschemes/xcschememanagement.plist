@@ -14,12 +14,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-Login iOS.xcscheme</key>
+		<key>Pods-Login macOS.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-Login macOS.xcscheme</key>
+		<key>Pods-Login.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -47,7 +47,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>65E096C40ADF194237083AA20CE88B96</key>
+		<key>454AD6B7F2B4F39AB397497EAFCB4CFE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -77,12 +77,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B76943DD44159A1348F9AD1EEDCA0C06</key>
+		<key>BAAFCB94D54F3F6919E11C92AF075E73</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BAAFCB94D54F3F6919E11C92AF075E73</key>
+		<key>FEE42848485818EA85EEA0BE524F74F3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
