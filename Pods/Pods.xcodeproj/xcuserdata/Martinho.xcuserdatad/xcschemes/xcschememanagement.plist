@@ -4,41 +4,85 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-Login-Alamofire.xcscheme</key>
+		<key>Alamofire-OSX.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>2</integer>
 		</dict>
-		<key>Pods-Login-SwiftyJSON.xcscheme</key>
+		<key>Alamofire-iOS.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>3</integer>
 		</dict>
-		<key>Pods-Login.xcscheme</key>
+		<key>Pods-Login iOS.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-			<key>orderHint</key>
-			<integer>1</integer>
+		</dict>
+		<key>Pods-Login macOS.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-LoginTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-LoginUITests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SwiftyJSON-OSX.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SwiftyJSON-iOS.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1880101F893B876E184D5172</key>
+		<key>65E096C40ADF194237083AA20CE88B96</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>75019972BB316D581B1ACF8F</key>
+		<key>71DF66AABF749E306E9D31020909A8B6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C02654BE90C6CD5AB32DB60E</key>
+		<key>89C69EB624EC8137588D9568F2E11964</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8A46F3686C46DC9D9C11D7DE4BDDBB54</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A3966BA3D64DDAD6B8071DF5339B4E92</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AF9436FCB7801D595D902062128EFD85</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B76943DD44159A1348F9AD1EEDCA0C06</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BAAFCB94D54F3F6919E11C92AF075E73</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -14,15 +14,3 @@ class LoginViewController: NSViewController {
         presenter?.login()
     }
 }
-
-class LoginServiceFactory {
-    class func build() -> LoginService {
-        return DummyLoginService()
-    }
-}
-
-class DummyLoginService: LoginService {
-    func areCredentialsValid(credentials: Credentials, delegate: LoginServiceDelegate) {
-        delegate.credentialsAreValid()
-    }
-}
