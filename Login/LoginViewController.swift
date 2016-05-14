@@ -2,6 +2,8 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    @IBAction func login(sender: AnyObject) {
+    }
     @IBOutlet weak var username: UITextField!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!

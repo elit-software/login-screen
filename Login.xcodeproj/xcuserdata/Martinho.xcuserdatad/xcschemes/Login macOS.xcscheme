@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EA129BF51CD2381C003DBD34"
-               BuildableName = "Login.app"
-               BlueprintName = "Login"
+               BlueprintIdentifier = "EA35E4841CE73ABC005CFE53"
+               BuildableName = "Login macOS.app"
+               BlueprintName = "Login macOS"
                ReferencedContainer = "container:Login.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -26,26 +26,15 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      codeCoverageEnabled = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EA129C091CD2381C003DBD34"
-               BuildableName = "LoginTests.xctest"
-               BlueprintName = "LoginTests"
-               ReferencedContainer = "container:Login.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EA129C141CD2381C003DBD34"
-               BuildableName = "LoginUITests.xctest"
-               BlueprintName = "LoginUITests"
+               BlueprintIdentifier = "EA35E4941CE73ABC005CFE53"
+               BuildableName = "Login macOSUITests.xctest"
+               BlueprintName = "Login macOSUITests"
                ReferencedContainer = "container:Login.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -53,9 +42,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "EA129BF51CD2381C003DBD34"
-            BuildableName = "Login.app"
-            BlueprintName = "Login"
+            BlueprintIdentifier = "EA35E4841CE73ABC005CFE53"
+            BuildableName = "Login macOS.app"
+            BlueprintName = "Login macOS"
             ReferencedContainer = "container:Login.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -76,9 +65,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "EA129BF51CD2381C003DBD34"
-            BuildableName = "Login.app"
-            BlueprintName = "Login"
+            BlueprintIdentifier = "EA35E4841CE73ABC005CFE53"
+            BuildableName = "Login macOS.app"
+            BlueprintName = "Login macOS"
             ReferencedContainer = "container:Login.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -95,9 +84,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "EA129BF51CD2381C003DBD34"
-            BuildableName = "Login.app"
-            BlueprintName = "Login"
+            BlueprintIdentifier = "EA35E4841CE73ABC005CFE53"
+            BuildableName = "Login macOS.app"
+            BlueprintName = "Login macOS"
             ReferencedContainer = "container:Login.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
