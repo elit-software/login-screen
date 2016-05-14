@@ -697,6 +697,9 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <progressIndicator hidden="YES" wantsLayer="YES" maxValue="100" displayedWhenStopped="NO" indeterminate="YES" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="bHg-aQ-0rI">
+                                <rect key="frame" x="50" y="125" width="380" height="20"/>
+                            </progressIndicator>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DKt-y9-FY2">
                                 <rect key="frame" x="203" y="135" width="74" height="32"/>
                                 <buttonCell key="cell" type="push" title="Login" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ayc-ei-haP">
@@ -711,20 +714,26 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Ela-pq-1hk" secondAttribute="trailing" constant="20" symbolic="YES" id="2rA-14-20q"/>
                             <constraint firstItem="X2c-u2-mHq" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" symbolic="YES" id="5ZR-OR-8aw"/>
+                            <constraint firstItem="bHg-aQ-0rI" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="7NR-7q-6nl"/>
+                            <constraint firstAttribute="trailing" secondItem="bHg-aQ-0rI" secondAttribute="trailing" constant="50" id="9Y7-HU-ECr"/>
                             <constraint firstAttribute="trailing" secondItem="3yf-Xa-TZO" secondAttribute="trailing" constant="20" symbolic="YES" id="Dfa-OG-pxr"/>
                             <constraint firstItem="3yf-Xa-TZO" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="HPk-dL-lDM"/>
+                            <constraint firstItem="bHg-aQ-0rI" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="50" id="Kl8-Ge-d7L"/>
                             <constraint firstItem="DKt-y9-FY2" firstAttribute="top" secondItem="3yf-Xa-TZO" secondAttribute="bottom" constant="8" symbolic="YES" id="R4A-Tm-vDL"/>
                             <constraint firstAttribute="trailing" secondItem="X2c-u2-mHq" secondAttribute="trailing" constant="20" symbolic="YES" id="U3L-9t-aLB"/>
                             <constraint firstItem="Ela-pq-1hk" firstAttribute="top" secondItem="X2c-u2-mHq" secondAttribute="bottom" constant="10" symbolic="YES" id="YYr-o5-tPb"/>
                             <constraint firstItem="X2c-u2-mHq" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="ZSW-US-p6C"/>
                             <constraint firstItem="3yf-Xa-TZO" firstAttribute="top" secondItem="Ela-pq-1hk" secondAttribute="bottom" constant="8" symbolic="YES" id="kOr-6e-0Us"/>
                             <constraint firstItem="Ela-pq-1hk" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="uK2-E0-lBd"/>
+                            <constraint firstItem="bHg-aQ-0rI" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="wew-Qx-Dy0"/>
                             <constraint firstItem="DKt-y9-FY2" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="yfE-fV-lJG"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="invalidCredentials" destination="3yf-Xa-TZO" id="FfI-qh-qOq"/>
+                        <outlet property="loginButton" destination="DKt-y9-FY2" id="rwT-Bw-geJ"/>
                         <outlet property="password" destination="Ela-pq-1hk" id="af7-cS-jXm"/>
+                        <outlet property="progressIndicator" destination="bHg-aQ-0rI" id="G1K-Np-JJY"/>
                         <outlet property="username" destination="X2c-u2-mHq" id="zSX-eM-Znp"/>
                         <segue destination="ZUU-fX-eNm" kind="sheet" identifier="Main" id="UYm-rz-6wW"/>
                     </connections>

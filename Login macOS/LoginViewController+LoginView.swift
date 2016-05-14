@@ -22,8 +22,14 @@ extension LoginViewController: LoginView {
     }
 
     func showLoadingInterface() {
+        progressIndicator.startAnimation(self)
+        progressIndicator.hidden = false
+        loginButton.hidden = true
     }
 
     func hideLoadingInterface() {
+        progressIndicator.stopAnimation(self)
+        progressIndicator.hidden = true
+        loginButton.hidden = false
     }
 }

@@ -5,7 +5,9 @@ class LoginViewController: NSViewController, NSTextFieldDelegate {
     @IBOutlet weak var username: NSTextField! { didSet { username.delegate = self } }
     @IBOutlet weak var password: NSTextField! { didSet { password.delegate = self } }
     @IBOutlet weak var invalidCredentials: NSTextField!
-
+    @IBOutlet weak var progressIndicator: NSProgressIndicator!
+    @IBOutlet weak var loginButton: NSButton!
+    
     var presenter: LoginPresenter?
 
     override func viewDidLoad() {
