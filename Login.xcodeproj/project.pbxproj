@@ -35,6 +35,15 @@
 		EA49382A1CDD033700C07876 /* Token+SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4938281CDD033700C07876 /* Token+SwiftyJSON.swift */; };
 		EA53501D1CD8CC7D0041381F /* SpyLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA53501C1CD8CC7D0041381F /* SpyLoginView.swift */; };
 		EA53501F1CD8CC9E0041381F /* SpyLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA53501E1CD8CC9E0041381F /* SpyLoginService.swift */; };
+		EA8B0D491CE7733E001239F4 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4938191CDD031800C07876 /* Credentials.swift */; };
+		EA8B0D4A1CE7733E001239F4 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA49381A1CDD031800C07876 /* LoginPresenter.swift */; };
+		EA8B0D4B1CE7733E001239F4 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA49381B1CDD031800C07876 /* LoginView.swift */; };
+		EA8B0D4C1CE7733E001239F4 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA49381C1CDD031800C07876 /* Token.swift */; };
+		EA8B0D4D1CE77342001239F4 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4938211CDD032A00C07876 /* LoginService.swift */; };
+		EA8B0D4E1CE77342001239F4 /* LoginServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4938221CDD032A00C07876 /* LoginServiceDelegate.swift */; };
+		EA8B0D4F1CE77342001239F4 /* RemoteLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4938231CDD032A00C07876 /* RemoteLoginService.swift */; };
+		EA8B0D511CE773DA001239F4 /* LoginViewController+LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8B0D501CE773DA001239F4 /* LoginViewController+LoginView.swift */; };
+		EA8B0D531CE77466001239F4 /* Token+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8B0D521CE77466001239F4 /* Token+Data.swift */; };
 		EAA7DEF81CDA622600BEF317 /* FakeRemoteLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA7DEF71CDA622600BEF317 /* FakeRemoteLoginService.swift */; };
 		EAA7DEFA1CDA625000BEF317 /* SpyLoginServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA7DEF91CDA625000BEF317 /* SpyLoginServiceDelegate.swift */; };
 		EAC0A6711CDBA8CC000CB230 /* LoginViewController+LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC0A6701CDBA8CC000CB230 /* LoginViewController+LoginView.swift */; };
@@ -105,6 +114,8 @@
 		EA4938281CDD033700C07876 /* Token+SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Token+SwiftyJSON.swift"; sourceTree = "<group>"; };
 		EA53501C1CD8CC7D0041381F /* SpyLoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpyLoginView.swift; sourceTree = "<group>"; };
 		EA53501E1CD8CC9E0041381F /* SpyLoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpyLoginService.swift; sourceTree = "<group>"; };
+		EA8B0D501CE773DA001239F4 /* LoginViewController+LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoginViewController+LoginView.swift"; sourceTree = "<group>"; };
+		EA8B0D521CE77466001239F4 /* Token+Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Token+Data.swift"; sourceTree = "<group>"; };
 		EAA7DEF71CDA622600BEF317 /* FakeRemoteLoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeRemoteLoginService.swift; sourceTree = "<group>"; };
 		EAA7DEF91CDA625000BEF317 /* SpyLoginServiceDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpyLoginServiceDelegate.swift; sourceTree = "<group>"; };
 		EAC0A6701CDBA8CC000CB230 /* LoginViewController+LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoginViewController+LoginView.swift"; sourceTree = "<group>"; };
@@ -252,6 +263,8 @@
 			children = (
 				EA35E4871CE73ABC005CFE53 /* AppDelegate.swift */,
 				EA35E4891CE73ABC005CFE53 /* LoginViewController.swift */,
+				EA8B0D501CE773DA001239F4 /* LoginViewController+LoginView.swift */,
+				EA8B0D521CE77466001239F4 /* Token+Data.swift */,
 				EA35E48D1CE73ABC005CFE53 /* Main.storyboard */,
 				EA35E4A21CE73DFE005CFE53 /* Supporting Files */,
 			);
@@ -660,8 +673,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA8B0D4A1CE7733E001239F4 /* LoginPresenter.swift in Sources */,
+				EA8B0D491CE7733E001239F4 /* Credentials.swift in Sources */,
+				EA8B0D4E1CE77342001239F4 /* LoginServiceDelegate.swift in Sources */,
+				EA8B0D511CE773DA001239F4 /* LoginViewController+LoginView.swift in Sources */,
 				EA35E48A1CE73ABC005CFE53 /* LoginViewController.swift in Sources */,
+				EA8B0D4C1CE7733E001239F4 /* Token.swift in Sources */,
+				EA8B0D531CE77466001239F4 /* Token+Data.swift in Sources */,
+				EA8B0D4B1CE7733E001239F4 /* LoginView.swift in Sources */,
 				EA35E4881CE73ABC005CFE53 /* AppDelegate.swift in Sources */,
+				EA8B0D4F1CE77342001239F4 /* RemoteLoginService.swift in Sources */,
+				EA8B0D4D1CE77342001239F4 /* LoginService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -982,6 +1004,7 @@
 				EA35E49E1CE73ABC005CFE53 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EA35E49F1CE73ABC005CFE53 /* Build configuration list for PBXNativeTarget "Login macOSUITests" */ = {
 			isa = XCConfigurationList;
@@ -990,6 +1013,7 @@
 				EA35E4A11CE73ABC005CFE53 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
