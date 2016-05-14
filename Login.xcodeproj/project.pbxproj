@@ -88,7 +88,7 @@
 		4D7FEEE6E1B5BED143504068 /* Pods-LoginTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LoginTests/Pods-LoginTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8F97F176C2858D197C37B416 /* Pods_Login_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Login_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3DDED0D324B7D005E2D604F /* Pods-Login macOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Login macOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Login macOS/Pods-Login macOS.release.xcconfig"; sourceTree = "<group>"; };
-		EA129BF61CD2381C003DBD34 /* Login iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Login iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA129BF61CD2381C003DBD34 /* Login.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Login.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA129BF91CD2381C003DBD34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA129BFB1CD2381C003DBD34 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = LoginViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		EA129BFE1CD2381C003DBD34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -222,7 +222,7 @@
 		EA129BF71CD2381C003DBD34 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EA129BF61CD2381C003DBD34 /* Login iOS.app */,
+				EA129BF61CD2381C003DBD34 /* Login.app */,
 				EA129C0A1CD2381C003DBD34 /* LoginTests.xctest */,
 				EA129C151CD2381C003DBD34 /* LoginUITests.xctest */,
 				EA35E4851CE73ABC005CFE53 /* Login macOS.app */,
@@ -419,9 +419,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EA129BF51CD2381C003DBD34 /* Login iOS */ = {
+		EA129BF51CD2381C003DBD34 /* Login */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EA129C1E1CD2381C003DBD34 /* Build configuration list for PBXNativeTarget "Login iOS" */;
+			buildConfigurationList = EA129C1E1CD2381C003DBD34 /* Build configuration list for PBXNativeTarget "Login" */;
 			buildPhases = (
 				9CAE799DD8B22FC623BB11F6 /* 📦 Check Pods Manifest.lock */,
 				EA129BF21CD2381C003DBD34 /* Sources */,
@@ -435,9 +435,9 @@
 			);
 			dependencies = (
 			);
-			name = "Login iOS";
+			name = Login;
 			productName = Login;
-			productReference = EA129BF61CD2381C003DBD34 /* Login iOS.app */;
+			productReference = EA129BF61CD2381C003DBD34 /* Login.app */;
 			productType = "com.apple.product-type.application";
 		};
 		EA129C091CD2381C003DBD34 /* LoginTests */ = {
@@ -562,7 +562,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EA129BF51CD2381C003DBD34 /* Login iOS */,
+				EA129BF51CD2381C003DBD34 /* Login */,
 				EA129C091CD2381C003DBD34 /* LoginTests */,
 				EA129C141CD2381C003DBD34 /* LoginUITests */,
 				EA35E4841CE73ABC005CFE53 /* Login macOS */,
@@ -873,12 +873,12 @@
 /* Begin PBXTargetDependency section */
 		EA129C0C1CD2381C003DBD34 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = EA129BF51CD2381C003DBD34 /* Login iOS */;
+			target = EA129BF51CD2381C003DBD34 /* Login */;
 			targetProxy = EA129C0B1CD2381C003DBD34 /* PBXContainerItemProxy */;
 		};
 		EA129C171CD2381C003DBD34 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = EA129BF51CD2381C003DBD34 /* Login iOS */;
+			target = EA129BF51CD2381C003DBD34 /* Login */;
 			targetProxy = EA129C161CD2381C003DBD34 /* PBXContainerItemProxy */;
 		};
 		EA35E4971CE73ABC005CFE53 /* PBXTargetDependency */ = {
@@ -1149,7 +1149,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EA129C1E1CD2381C003DBD34 /* Build configuration list for PBXNativeTarget "Login iOS" */ = {
+		EA129C1E1CD2381C003DBD34 /* Build configuration list for PBXNativeTarget "Login" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA129C1F1CD2381C003DBD34 /* Debug */,

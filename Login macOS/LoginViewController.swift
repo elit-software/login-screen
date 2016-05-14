@@ -7,7 +7,7 @@ class LoginViewController: NSViewController, NSTextFieldDelegate {
     @IBOutlet weak var invalidCredentials: NSTextField!
     @IBOutlet weak var progressIndicator: NSProgressIndicator!
     @IBOutlet weak var loginButton: NSButton!
-    
+
     var presenter: LoginPresenter?
 
     override func viewDidLoad() {
