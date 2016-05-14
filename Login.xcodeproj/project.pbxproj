@@ -25,7 +25,7 @@
 		EA35E48A1CE73ABC005CFE53 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA35E4891CE73ABC005CFE53 /* LoginViewController.swift */; };
 		EA35E48C1CE73ABC005CFE53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA35E48B1CE73ABC005CFE53 /* Assets.xcassets */; };
 		EA35E48F1CE73ABC005CFE53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA35E48D1CE73ABC005CFE53 /* Main.storyboard */; };
-		EA35E49A1CE73ABC005CFE53 /* Login_macOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA35E4991CE73ABC005CFE53 /* Login_macOSUITests.swift */; };
+		EA35E49A1CE73ABC005CFE53 /* LoginUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA35E4991CE73ABC005CFE53 /* LoginUITests.swift */; };
 		EA3972121CDA22A600E7898E /* LoginServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3972111CDA22A600E7898E /* LoginServiceTests.swift */; };
 		EA49381D1CDD031800C07876 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4938191CDD031800C07876 /* Credentials.swift */; };
 		EA49381E1CDD031800C07876 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA49381A1CDD031800C07876 /* LoginPresenter.swift */; };
@@ -111,7 +111,7 @@
 		EA35E48E1CE73ABC005CFE53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EA35E4901CE73ABC005CFE53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA35E4951CE73ABC005CFE53 /* Login macOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Login macOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA35E4991CE73ABC005CFE53 /* Login_macOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login_macOSUITests.swift; sourceTree = "<group>"; };
+		EA35E4991CE73ABC005CFE53 /* LoginUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUITests.swift; sourceTree = "<group>"; };
 		EA35E49B1CE73ABC005CFE53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA3972111CDA22A600E7898E /* LoginServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginServiceTests.swift; sourceTree = "<group>"; };
 		EA4938191CDD031800C07876 /* Credentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Credentials.swift; path = Login/Credentials.swift; sourceTree = "<group>"; };
@@ -300,7 +300,7 @@
 		EA35E4981CE73ABC005CFE53 /* Login macOS UITests */ = {
 			isa = PBXGroup;
 			children = (
-				EA35E4991CE73ABC005CFE53 /* Login_macOSUITests.swift */,
+				EA35E4991CE73ABC005CFE53 /* LoginUITests.swift */,
 				EA35E49B1CE73ABC005CFE53 /* Info.plist */,
 			);
 			name = "Login macOS UITests";
@@ -856,7 +856,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA35E49A1CE73ABC005CFE53 /* Login_macOSUITests.swift in Sources */,
+				EA35E49A1CE73ABC005CFE53 /* LoginUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
