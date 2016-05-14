@@ -689,8 +689,16 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3yf-Xa-TZO">
+                                <rect key="frame" x="18" y="171" width="444" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Invalid Credentials" id="nBe-y7-htZ">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" red="1" green="0.2323179692029953" blue="0.23232188820838928" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DKt-y9-FY2">
-                                <rect key="frame" x="203" y="160" width="74" height="32"/>
+                                <rect key="frame" x="203" y="135" width="74" height="32"/>
                                 <buttonCell key="cell" type="push" title="Login" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ayc-ei-haP">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -703,15 +711,21 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Ela-pq-1hk" secondAttribute="trailing" constant="20" symbolic="YES" id="2rA-14-20q"/>
                             <constraint firstItem="X2c-u2-mHq" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" symbolic="YES" id="5ZR-OR-8aw"/>
-                            <constraint firstItem="DKt-y9-FY2" firstAttribute="top" secondItem="Ela-pq-1hk" secondAttribute="bottom" constant="8" symbolic="YES" id="HyV-vY-m0T"/>
+                            <constraint firstAttribute="trailing" secondItem="3yf-Xa-TZO" secondAttribute="trailing" constant="20" symbolic="YES" id="Dfa-OG-pxr"/>
+                            <constraint firstItem="3yf-Xa-TZO" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="HPk-dL-lDM"/>
+                            <constraint firstItem="DKt-y9-FY2" firstAttribute="top" secondItem="3yf-Xa-TZO" secondAttribute="bottom" constant="8" symbolic="YES" id="R4A-Tm-vDL"/>
                             <constraint firstAttribute="trailing" secondItem="X2c-u2-mHq" secondAttribute="trailing" constant="20" symbolic="YES" id="U3L-9t-aLB"/>
                             <constraint firstItem="Ela-pq-1hk" firstAttribute="top" secondItem="X2c-u2-mHq" secondAttribute="bottom" constant="10" symbolic="YES" id="YYr-o5-tPb"/>
                             <constraint firstItem="X2c-u2-mHq" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="ZSW-US-p6C"/>
+                            <constraint firstItem="3yf-Xa-TZO" firstAttribute="top" secondItem="Ela-pq-1hk" secondAttribute="bottom" constant="8" symbolic="YES" id="kOr-6e-0Us"/>
                             <constraint firstItem="Ela-pq-1hk" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" symbolic="YES" id="uK2-E0-lBd"/>
                             <constraint firstItem="DKt-y9-FY2" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="yfE-fV-lJG"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="invalidCredentials" destination="3yf-Xa-TZO" id="FfI-qh-qOq"/>
+                        <outlet property="password" destination="Ela-pq-1hk" id="af7-cS-jXm"/>
+                        <outlet property="username" destination="X2c-u2-mHq" id="zSX-eM-Znp"/>
                         <segue destination="ZUU-fX-eNm" kind="sheet" identifier="Main" id="UYm-rz-6wW"/>
                     </connections>
                 </viewController>
