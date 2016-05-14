@@ -1,0 +1,31 @@
+client:
+  name: swift-build
+tools: {}
+targets:
+  "test": []
+  "main": ["<CrossPlatform.module>","<CrossPlatform.exe>"]
+default: "main"
+commands: 
+  "<CrossPlatform.module>":
+    tool: swift-compiler
+    executable: "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-05-09-a.xctoolchain/usr/bin/swiftc"
+    module-name: "CrossPlatform"
+    module-output-path: "/Users/Martinho/Desktop/Login/CrossPlatform/.build/debug/CrossPlatform.swiftmodule"
+    inputs: []
+    outputs: ["<CrossPlatform.module>","/Users/Martinho/Desktop/Login/CrossPlatform/.build/debug/CrossPlatform.build/main.swift.o"]
+    import-paths: ["/Users/Martinho/Desktop/Login/CrossPlatform/.build/debug"]
+    temps-path: "/Users/Martinho/Desktop/Login/CrossPlatform/.build/debug/CrossPlatform.build"
+    objects: ["/Users/Martinho/Desktop/Login/CrossPlatform/.build/debug/CrossPlatform.build/main.swift.o"]
+    other-args: ["-j8","-D","SWIFT_PACKAGE","-Onone","-g","-enable-testing","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-target","x86_64-apple-macosx10.10","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk","-module-cache-path","/Users/Martinho/Desktop/Login/CrossPlatform/.build/debug/ModuleCache"]
+    sources: ["/Users/Martinho/Desktop/Login/CrossPlatform/Sources/main.swift"]
+    is-library: false
+    enable-whole-module-optimization: false
+    num-threads: "8"
+
+  "<CrossPlatform.exe>":
+    tool: shell
+    description: "Linking .build/debug/CrossPlatform"
+    inputs: ["/Users/Martinho/Desktop/Login/CrossPlatform/.build/debug/CrossPlatform.build/main.swift.o"]
+    outputs: ["<CrossPlatform.exe>","/Users/Martinho/Desktop/Login/CrossPlatform/.build/debug/CrossPlatform"]
+    args: ["/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-05-09-a.xctoolchain/usr/bin/swiftc","-target","x86_64-apple-macosx10.10","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk","-g","-L/Users/Martinho/Desktop/Login/CrossPlatform/.build/debug","-o","/Users/Martinho/Desktop/Login/CrossPlatform/.build/debug/CrossPlatform","-emit-executable","/Users/Martinho/Desktop/Login/CrossPlatform/.build/debug/CrossPlatform.build/main.swift.o"]
+

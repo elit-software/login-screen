@@ -1,0 +1,5 @@
+version: "Apple Swift version 3.0-dev (LLVM dffa09ffd8, Clang 9f0d189820, Swift 1c720b8f84)"
+options: "5427c4f2e24228b8ff0a915c6ebf4fdd"
+build_time: [516559167, 733468000]
+inputs:
+  "/Users/Martinho/Desktop/Login/CrossPlatform/Sources/main.swift": [516558295, 0]

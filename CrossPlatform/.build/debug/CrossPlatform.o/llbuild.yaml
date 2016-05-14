@@ -1,0 +1,29 @@
+client:
+  name: swift-build
+
+tools: {}
+
+targets:
+  "": [<CrossPlatform>]
+  CrossPlatform: [<CrossPlatform>]
+
+commands:
+  <CrossPlatform-swiftc>:
+    tool: swift-compiler
+    executable: "/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-02-08-a.xctoolchain/usr/bin/swiftc"
+    inputs: ["/Users/Martinho/Desktop/Login/CrossPlatform/Sources/main.swift"]
+    outputs: ["<CrossPlatform-swiftc>","/Users/Martinho/Desktop/Login/CrossPlatform/.build/debug/CrossPlatform.swiftmodule","/Users/Martinho/Desktop/Login/CrossPlatform/.build/debug/CrossPlatform.o/Sources/main.swift.o"]
+    module-name: "CrossPlatform"
+    module-output-path: "/Users/Martinho/Desktop/Login/CrossPlatform/.build/debug/CrossPlatform.swiftmodule"
+    is-library: false
+    sources: ["/Users/Martinho/Desktop/Login/CrossPlatform/Sources/main.swift"]
+    objects: ["/Users/Martinho/Desktop/Login/CrossPlatform/.build/debug/CrossPlatform.o/Sources/main.swift.o"]
+    import-paths: ["/Users/Martinho/Desktop/Login/CrossPlatform/.build/debug"]
+    temps-path: "/Users/Martinho/Desktop/Login/CrossPlatform/.build/debug/CrossPlatform.o/CrossPlatform"
+    other-args: ["-j8","-Onone","-g","-target","x86_64-apple-macosx10.10","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk","-I","/usr/local/include","-D","SWIFT_PACKAGE"]
+  <CrossPlatform>:
+    tool: shell
+    inputs: ["<CrossPlatform-swiftc>","/Users/Martinho/Desktop/Login/CrossPlatform/.build/debug/CrossPlatform.o/Sources/main.swift.o"]
+    outputs: ["<CrossPlatform>","/Users/Martinho/Desktop/Login/CrossPlatform/.build/debug/CrossPlatform"]
+    args: ["/Library/Developer/Toolchains/swift-DEVELOPMENT-SNAPSHOT-2016-02-08-a.xctoolchain/usr/bin/swiftc","-o","/Users/Martinho/Desktop/Login/CrossPlatform/.build/debug/CrossPlatform","/Users/Martinho/Desktop/Login/CrossPlatform/.build/debug/CrossPlatform.o/Sources/main.swift.o","-target","x86_64-apple-macosx10.10","-Xlinker","-all_load","-g","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk","-L/usr/local/lib"]
+    description: "Linking Executable:  .build/debug/CrossPlatform"

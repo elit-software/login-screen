@@ -27,24 +27,10 @@
 		EA35E48F1CE73ABC005CFE53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA35E48D1CE73ABC005CFE53 /* Main.storyboard */; };
 		EA35E49A1CE73ABC005CFE53 /* LoginUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA35E4991CE73ABC005CFE53 /* LoginUITests.swift */; };
 		EA3972121CDA22A600E7898E /* LoginServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3972111CDA22A600E7898E /* LoginServiceTests.swift */; };
-		EA49381D1CDD031800C07876 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4938191CDD031800C07876 /* Credentials.swift */; };
-		EA49381E1CDD031800C07876 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA49381A1CDD031800C07876 /* LoginPresenter.swift */; };
-		EA49381F1CDD031800C07876 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA49381B1CDD031800C07876 /* LoginView.swift */; };
-		EA4938201CDD031800C07876 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA49381C1CDD031800C07876 /* Token.swift */; };
-		EA4938241CDD032A00C07876 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4938211CDD032A00C07876 /* LoginService.swift */; };
-		EA4938251CDD032A00C07876 /* LoginServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4938221CDD032A00C07876 /* LoginServiceDelegate.swift */; };
-		EA4938261CDD032A00C07876 /* RemoteLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4938231CDD032A00C07876 /* RemoteLoginService.swift */; };
 		EA4938291CDD033700C07876 /* AlamofireLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4938271CDD033700C07876 /* AlamofireLoginService.swift */; };
 		EA49382A1CDD033700C07876 /* Token+SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4938281CDD033700C07876 /* Token+SwiftyJSON.swift */; };
 		EA53501D1CD8CC7D0041381F /* SpyLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA53501C1CD8CC7D0041381F /* SpyLoginView.swift */; };
 		EA53501F1CD8CC9E0041381F /* SpyLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA53501E1CD8CC9E0041381F /* SpyLoginService.swift */; };
-		EA8B0D491CE7733E001239F4 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4938191CDD031800C07876 /* Credentials.swift */; };
-		EA8B0D4A1CE7733E001239F4 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA49381A1CDD031800C07876 /* LoginPresenter.swift */; };
-		EA8B0D4B1CE7733E001239F4 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA49381B1CDD031800C07876 /* LoginView.swift */; };
-		EA8B0D4C1CE7733E001239F4 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA49381C1CDD031800C07876 /* Token.swift */; };
-		EA8B0D4D1CE77342001239F4 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4938211CDD032A00C07876 /* LoginService.swift */; };
-		EA8B0D4E1CE77342001239F4 /* LoginServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4938221CDD032A00C07876 /* LoginServiceDelegate.swift */; };
-		EA8B0D4F1CE77342001239F4 /* RemoteLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4938231CDD032A00C07876 /* RemoteLoginService.swift */; };
 		EA8B0D511CE773DA001239F4 /* LoginViewController+LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8B0D501CE773DA001239F4 /* LoginViewController+LoginView.swift */; };
 		EA8B0D541CE775EF001239F4 /* LoginServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA261B291CDB6DF5006AD9D6 /* LoginServiceFactory.swift */; };
 		EA8B0D551CE775F3001239F4 /* Token+SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA4938281CDD033700C07876 /* Token+SwiftyJSON.swift */; };
@@ -52,6 +38,20 @@
 		EAA7DEF81CDA622600BEF317 /* FakeRemoteLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA7DEF71CDA622600BEF317 /* FakeRemoteLoginService.swift */; };
 		EAA7DEFA1CDA625000BEF317 /* SpyLoginServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA7DEF91CDA625000BEF317 /* SpyLoginServiceDelegate.swift */; };
 		EAC0A6711CDBA8CC000CB230 /* LoginViewController+LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC0A6701CDBA8CC000CB230 /* LoginViewController+LoginView.swift */; };
+		EAD017D91CE78D8700A87055 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD017D61CE78D8700A87055 /* LoginService.swift */; };
+		EAD017DA1CE78D8700A87055 /* LoginServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD017D71CE78D8700A87055 /* LoginServiceDelegate.swift */; };
+		EAD017DB1CE78D8700A87055 /* RemoteLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD017D81CE78D8700A87055 /* RemoteLoginService.swift */; };
+		EAD017E21CE78D8F00A87055 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD017DD1CE78D8E00A87055 /* LoginPresenter.swift */; };
+		EAD017E31CE78D8F00A87055 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD017DE1CE78D8E00A87055 /* LoginView.swift */; };
+		EAD017E51CE78D8F00A87055 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD017E01CE78D8E00A87055 /* Token.swift */; };
+		EAD017E61CE78D9F00A87055 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD017DC1CE78D8E00A87055 /* Credentials.swift */; };
+		EAD017E71CE78DA100A87055 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD017DC1CE78D8E00A87055 /* Credentials.swift */; };
+		EAD017E81CE78DA100A87055 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD017DD1CE78D8E00A87055 /* LoginPresenter.swift */; };
+		EAD017E91CE78DA100A87055 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD017DE1CE78D8E00A87055 /* LoginView.swift */; };
+		EAD017EA1CE78DA100A87055 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD017E01CE78D8E00A87055 /* Token.swift */; };
+		EAD017EB1CE78DA600A87055 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD017D61CE78D8700A87055 /* LoginService.swift */; };
+		EAD017EC1CE78DA600A87055 /* LoginServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD017D71CE78D8700A87055 /* LoginServiceDelegate.swift */; };
+		EAD017ED1CE78DA600A87055 /* RemoteLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD017D81CE78D8700A87055 /* RemoteLoginService.swift */; };
 		F07B89A6B55E1277AB640F9E /* Pods_Login.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 252BA554DA46ECA1E425B091 /* Pods_Login.framework */; };
 /* End PBXBuildFile section */
 
@@ -118,13 +118,6 @@
 		EA35E4991CE73ABC005CFE53 /* LoginUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUITests.swift; sourceTree = "<group>"; };
 		EA35E49B1CE73ABC005CFE53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA3972111CDA22A600E7898E /* LoginServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginServiceTests.swift; sourceTree = "<group>"; };
-		EA4938191CDD031800C07876 /* Credentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
-		EA49381A1CDD031800C07876 /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
-		EA49381B1CDD031800C07876 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		EA49381C1CDD031800C07876 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
-		EA4938211CDD032A00C07876 /* LoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
-		EA4938221CDD032A00C07876 /* LoginServiceDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginServiceDelegate.swift; sourceTree = "<group>"; };
-		EA4938231CDD032A00C07876 /* RemoteLoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteLoginService.swift; sourceTree = "<group>"; };
 		EA4938271CDD033700C07876 /* AlamofireLoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireLoginService.swift; sourceTree = "<group>"; };
 		EA4938281CDD033700C07876 /* Token+SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Token+SwiftyJSON.swift"; sourceTree = "<group>"; };
 		EA53501C1CD8CC7D0041381F /* SpyLoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpyLoginView.swift; sourceTree = "<group>"; };
@@ -133,6 +126,15 @@
 		EAA7DEF71CDA622600BEF317 /* FakeRemoteLoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeRemoteLoginService.swift; sourceTree = "<group>"; };
 		EAA7DEF91CDA625000BEF317 /* SpyLoginServiceDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpyLoginServiceDelegate.swift; sourceTree = "<group>"; };
 		EAC0A6701CDBA8CC000CB230 /* LoginViewController+LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LoginViewController+LoginView.swift"; sourceTree = "<group>"; };
+		EAD017D61CE78D8700A87055 /* LoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginService.swift; path = "CrossPlatform/Sources/Login Service/LoginService.swift"; sourceTree = SOURCE_ROOT; };
+		EAD017D71CE78D8700A87055 /* LoginServiceDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginServiceDelegate.swift; path = "CrossPlatform/Sources/Login Service/LoginServiceDelegate.swift"; sourceTree = SOURCE_ROOT; };
+		EAD017D81CE78D8700A87055 /* RemoteLoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RemoteLoginService.swift; path = "CrossPlatform/Sources/Login Service/RemoteLoginService.swift"; sourceTree = SOURCE_ROOT; };
+		EAD017DC1CE78D8E00A87055 /* Credentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Credentials.swift; path = CrossPlatform/Sources/Credentials.swift; sourceTree = SOURCE_ROOT; };
+		EAD017DD1CE78D8E00A87055 /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginPresenter.swift; path = CrossPlatform/Sources/LoginPresenter.swift; sourceTree = SOURCE_ROOT; };
+		EAD017DE1CE78D8E00A87055 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginView.swift; path = CrossPlatform/Sources/LoginView.swift; sourceTree = SOURCE_ROOT; };
+		EAD017DF1CE78D8E00A87055 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = main.swift; path = CrossPlatform/Sources/main.swift; sourceTree = SOURCE_ROOT; };
+		EAD017E01CE78D8E00A87055 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Token.swift; path = CrossPlatform/Sources/Token.swift; sourceTree = SOURCE_ROOT; };
+		EAD017EE1CE78E2D00A87055 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Package.swift; path = CrossPlatform/Package.swift; sourceTree = SOURCE_ROOT; };
 		F231FA71B21667C5FE3C463A /* Pods_Login_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Login_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5A2BF3C5B48F4D39F0747B8 /* Pods-Login macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Login macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Login macOS/Pods-Login macOS.debug.xcconfig"; sourceTree = "<group>"; };
 		F9892E4C6FAC1BDB882DDFDB /* Pods-Login iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Login iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Login iOS/Pods-Login iOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 			children = (
 				EA8B0D571CE776F0001239F4 /* Apple OS */,
 				468718DCFC1094F2CBF6242A /* Frameworks */,
+				EAD017F01CE78E3600A87055 /* Cross Platform */,
 				EA5350151CD8C6600041381F /* Login */,
 				EA129BF81CD2381C003DBD34 /* Login iOS */,
 				EA129C181CD2381C003DBD34 /* Login iOS UITests */,
@@ -323,11 +326,11 @@
 		EA5350151CD8C6600041381F /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				EAD017DC1CE78D8E00A87055 /* Credentials.swift */,
+				EAD017DD1CE78D8E00A87055 /* LoginPresenter.swift */,
+				EAD017DE1CE78D8E00A87055 /* LoginView.swift */,
+				EAD017E01CE78D8E00A87055 /* Token.swift */,
 				EA6F4F001CDA1D76001F764E /* Login Service */,
-				EA4938191CDD031800C07876 /* Credentials.swift */,
-				EA49381A1CDD031800C07876 /* LoginPresenter.swift */,
-				EA49381B1CDD031800C07876 /* LoginView.swift */,
-				EA49381C1CDD031800C07876 /* Token.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -362,9 +365,9 @@
 		EA6F4F001CDA1D76001F764E /* Login Service */ = {
 			isa = PBXGroup;
 			children = (
-				EA4938211CDD032A00C07876 /* LoginService.swift */,
-				EA4938221CDD032A00C07876 /* LoginServiceDelegate.swift */,
-				EA4938231CDD032A00C07876 /* RemoteLoginService.swift */,
+				EAD017D61CE78D8700A87055 /* LoginService.swift */,
+				EAD017D71CE78D8700A87055 /* LoginServiceDelegate.swift */,
+				EAD017D81CE78D8700A87055 /* RemoteLoginService.swift */,
 			);
 			path = "Login Service";
 			sourceTree = "<group>";
@@ -418,6 +421,16 @@
 				EAA7DEF91CDA625000BEF317 /* SpyLoginServiceDelegate.swift */,
 			);
 			path = "Spy and Fake";
+			sourceTree = "<group>";
+		};
+		EAD017F01CE78E3600A87055 /* Cross Platform */ = {
+			isa = PBXGroup;
+			children = (
+				EAD017EE1CE78E2D00A87055 /* Package.swift */,
+				EAD017DF1CE78D8E00A87055 /* main.swift */,
+			);
+			name = "Cross Platform";
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -807,18 +820,18 @@
 			files = (
 				EA4938291CDD033700C07876 /* AlamofireLoginService.swift in Sources */,
 				EA261B2A1CDB6DF5006AD9D6 /* LoginServiceFactory.swift in Sources */,
+				EAD017DB1CE78D8700A87055 /* RemoteLoginService.swift in Sources */,
 				EA49382A1CDD033700C07876 /* Token+SwiftyJSON.swift in Sources */,
 				EA261B2E1CDB70C9006AD9D6 /* AlertUtilities.swift in Sources */,
+				EAD017D91CE78D8700A87055 /* LoginService.swift in Sources */,
+				EAD017E51CE78D8F00A87055 /* Token.swift in Sources */,
 				EA129BFC1CD2381C003DBD34 /* LoginViewController.swift in Sources */,
-				EA4938251CDD032A00C07876 /* LoginServiceDelegate.swift in Sources */,
-				EA4938261CDD032A00C07876 /* RemoteLoginService.swift in Sources */,
+				EAD017E31CE78D8F00A87055 /* LoginView.swift in Sources */,
+				EAD017E21CE78D8F00A87055 /* LoginPresenter.swift in Sources */,
 				EA261B2C1CDB6ED7006AD9D6 /* UITextFieldExtension.swift in Sources */,
-				EA4938241CDD032A00C07876 /* LoginService.swift in Sources */,
-				EA49381E1CDD031800C07876 /* LoginPresenter.swift in Sources */,
-				EA49381D1CDD031800C07876 /* Credentials.swift in Sources */,
-				EA49381F1CDD031800C07876 /* LoginView.swift in Sources */,
-				EA4938201CDD031800C07876 /* Token.swift in Sources */,
 				EA129BFA1CD2381C003DBD34 /* AppDelegate.swift in Sources */,
+				EAD017E61CE78D9F00A87055 /* Credentials.swift in Sources */,
+				EAD017DA1CE78D8700A87055 /* LoginServiceDelegate.swift in Sources */,
 				EAC0A6711CDBA8CC000CB230 /* LoginViewController+LoginView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -848,19 +861,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA8B0D4A1CE7733E001239F4 /* LoginPresenter.swift in Sources */,
-				EA8B0D491CE7733E001239F4 /* Credentials.swift in Sources */,
+				EAD017E81CE78DA100A87055 /* LoginPresenter.swift in Sources */,
+				EAD017EA1CE78DA100A87055 /* Token.swift in Sources */,
+				EAD017EC1CE78DA600A87055 /* LoginServiceDelegate.swift in Sources */,
 				EA8B0D541CE775EF001239F4 /* LoginServiceFactory.swift in Sources */,
-				EA8B0D4E1CE77342001239F4 /* LoginServiceDelegate.swift in Sources */,
 				EA8B0D511CE773DA001239F4 /* LoginViewController+LoginView.swift in Sources */,
+				EAD017E91CE78DA100A87055 /* LoginView.swift in Sources */,
 				EA35E48A1CE73ABC005CFE53 /* LoginViewController.swift in Sources */,
-				EA8B0D4C1CE7733E001239F4 /* Token.swift in Sources */,
-				EA8B0D4B1CE7733E001239F4 /* LoginView.swift in Sources */,
+				EAD017EB1CE78DA600A87055 /* LoginService.swift in Sources */,
+				EAD017E71CE78DA100A87055 /* Credentials.swift in Sources */,
 				EA35E4881CE73ABC005CFE53 /* AppDelegate.swift in Sources */,
 				EA8B0D551CE775F3001239F4 /* Token+SwiftyJSON.swift in Sources */,
-				EA8B0D4F1CE77342001239F4 /* RemoteLoginService.swift in Sources */,
+				EAD017ED1CE78DA600A87055 /* RemoteLoginService.swift in Sources */,
 				EA8B0D561CE775F5001239F4 /* AlamofireLoginService.swift in Sources */,
-				EA8B0D4D1CE77342001239F4 /* LoginService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
