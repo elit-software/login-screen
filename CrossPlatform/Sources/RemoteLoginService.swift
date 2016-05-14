@@ -1,5 +1,5 @@
 protocol RemoteLoginService: LoginService {
-    func get(url: String, credentials: Credentials, callback: AnyObject? -> Void)
+    func get(url: String, credentials: Credentials, callback: (AnyObject?) -> Void)
 }
 
 extension RemoteLoginService {
@@ -9,8 +9,8 @@ extension RemoteLoginService {
     }
 
     func areCredentialsValid(credentials: Credentials, delegate: LoginServiceDelegate) {
-        get(authenticationURL, credentials: credentials) { data in
-            let token = Token(data: data)
+        get(url: authenticationURL, credentials: credentials) { data in
+            let token = Token(token: data)
             token.isEmpty ? delegate.credentialsAreNotValid() : delegate.credentialsAreValid()
         }
     }
