@@ -301,7 +301,7 @@
 			isa = PBXGroup;
 			children = (
 				EA35E4991CE73ABC005CFE53 /* LoginUITests.swift */,
-				EA35E49B1CE73ABC005CFE53 /* Info.plist */,
+				EA8B0D581CE781F1001239F4 /* Supporting Files */,
 			);
 			name = "Login macOS UITests";
 			path = "Login macOSUITests";
@@ -371,6 +371,14 @@
 				EA261B301CDB725C006AD9D6 /* Login Service */,
 			);
 			name = "Apple OS";
+			sourceTree = "<group>";
+		};
+		EA8B0D581CE781F1001239F4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EA35E49B1CE73ABC005CFE53 /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		EAA7DEFB1CDA62CC00BEF317 /* Login Service */ = {
