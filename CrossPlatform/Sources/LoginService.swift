@@ -1,3 +1,3 @@
 protocol LoginService {
-    func areCredentialsValid(credentials: Credentials, delegate: LoginServiceDelegate)
+    func areCredentialsValid(credentials credentials: Credentials, delegate: LoginServiceDelegate)
 }

@@ -9,7 +9,7 @@ class LoginServiceTests: XCTestCase {
     func testWhenTokenIsEmptyCredentialsAreNotValid() {
         let service = FakeRemoteLoginService(validCredentials: false)
 
-        service.areCredentialsValid(emptyCredentials, delegate: delegate)
+        service.areCredentialsValid(credentials: emptyCredentials, delegate: delegate)
 
         XCTAssert(delegate.credentialsAreNotValidCalled)
     }
@@ -17,7 +17,7 @@ class LoginServiceTests: XCTestCase {
     func testWhenTokenIsNotEmptyCredentialsAreValid() {
         let service = FakeRemoteLoginService(validCredentials: true)
 
-        service.areCredentialsValid(emptyCredentials, delegate: delegate)
+        service.areCredentialsValid(credentials: emptyCredentials, delegate: delegate)
 
         XCTAssert(delegate.credentialsAreValidCalled)
     }

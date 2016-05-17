@@ -1,5 +1,5 @@
 protocol RemoteLoginService: LoginService {
-    func get(url: String, credentials: Credentials, callback: (AnyObject?) -> Void)
+    func get(url url: String, credentials: Credentials, callback: (AnyObject?) -> Void)
 }
 
 extension RemoteLoginService {
@@ -8,9 +8,9 @@ extension RemoteLoginService {
         return "http://private-c387d-login239.apiary-mock.com/authentication"
     }
 
-    func areCredentialsValid(credentials: Credentials, delegate: LoginServiceDelegate) {
+    func areCredentialsValid(credentials credentials: Credentials, delegate: LoginServiceDelegate) {
         get(url: authenticationURL, credentials: credentials) { data in
-            let token = Token(token: data)
+            let token = Token(data: data)
             token.isEmpty ? delegate.credentialsAreNotValid() : delegate.credentialsAreValid()
         }
     }
