@@ -27,6 +27,8 @@ class LoginController: LoginView {
 
     func showCredentialsAreValid() {
         print("Credentials Are Valid")
+        let controller = MainController()
+        controller.display()
     }
 
     func showCredentialsAreNotValid() {
