@@ -18,9 +18,15 @@ For the command-line Swift application:
 
 ## Installation
 
-To compile/run the iOS application open the Xcode Workspace Login.xcworkspace and after selecting the Login iOS scheme do Cmd + R.
+To compile/run the iOS application:
+* open the Xcode Workspace Login.xcworkspace
+* select the Login iOS scheme
+* Run by pressing Play or by pressing [Cmd + R]
 
-To compile/run the macOS application open the Xcode Workspace Login.xcworkspace and after selecting the Login macOS scheme do Cmd + R.
+To compile/run the macOS application:
+* open the Xcode Workspace Login.xcworkspace
+* select the Login macOS scheme
+* Run by pressing Play or by pressing [Cmd + R]
 
 To compile the command-line application, in the CrossPlatform directory, do:
 ```sh
