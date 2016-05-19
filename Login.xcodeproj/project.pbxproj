@@ -51,6 +51,8 @@
 		EAD017F71CE791F300A87055 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD017F11CE791EC00A87055 /* LoginService.swift */; };
 		EAD017F81CE791F300A87055 /* LoginServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD017F21CE791EC00A87055 /* LoginServiceDelegate.swift */; };
 		EAD017F91CE791F300A87055 /* RemoteLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD017F31CE791EC00A87055 /* RemoteLoginService.swift */; };
+		EAFF2C301CEE22F80025FC27 /* CredentialsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFF2C2F1CEE22F80025FC27 /* CredentialsTest.swift */; };
+		EAFF2C321CEE24DC0025FC27 /* Credentials+NSURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFF2C311CEE24DC0025FC27 /* Credentials+NSURL.swift */; };
 		F07B89A6B55E1277AB640F9E /* Pods_Login.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 252BA554DA46ECA1E425B091 /* Pods_Login.framework */; };
 /* End PBXBuildFile section */
 
@@ -137,6 +139,8 @@
 		EAD017F11CE791EC00A87055 /* LoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginService.swift; path = CrossPlatform/Sources/LoginService.swift; sourceTree = SOURCE_ROOT; };
 		EAD017F21CE791EC00A87055 /* LoginServiceDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginServiceDelegate.swift; path = CrossPlatform/Sources/LoginServiceDelegate.swift; sourceTree = SOURCE_ROOT; };
 		EAD017F31CE791EC00A87055 /* RemoteLoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RemoteLoginService.swift; path = CrossPlatform/Sources/RemoteLoginService.swift; sourceTree = SOURCE_ROOT; };
+		EAFF2C2F1CEE22F80025FC27 /* CredentialsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CredentialsTest.swift; sourceTree = "<group>"; };
+		EAFF2C311CEE24DC0025FC27 /* Credentials+NSURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Credentials+NSURL.swift"; sourceTree = "<group>"; };
 		F231FA71B21667C5FE3C463A /* Pods_Login_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Login_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5A2BF3C5B48F4D39F0747B8 /* Pods-Login macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Login macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Login macOS/Pods-Login macOS.debug.xcconfig"; sourceTree = "<group>"; };
 		F9892E4C6FAC1BDB882DDFDB /* Pods-Login iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Login iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Login iOS/Pods-Login iOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -252,6 +256,7 @@
 				EAC0A6701CDBA8CC000CB230 /* LoginViewController+LoginView.swift */,
 				EA129BFB1CD2381C003DBD34 /* LoginViewController.swift */,
 				EA129BFD1CD2381C003DBD34 /* Main.storyboard */,
+				EAFF2C311CEE24DC0025FC27 /* Credentials+NSURL.swift */,
 			);
 			path = "Login iOS";
 			sourceTree = "<group>";
@@ -262,6 +267,7 @@
 				EA5350221CD8CEF10041381F /* Login Presenter */,
 				EAA7DEFB1CDA62CC00BEF317 /* Login Service */,
 				EA5350211CD8CCC50041381F /* Supporting Files */,
+				EAFF2C2F1CEE22F80025FC27 /* CredentialsTest.swift */,
 			);
 			path = LoginTests;
 			sourceTree = "<group>";
@@ -837,6 +843,7 @@
 				EA129BFA1CD2381C003DBD34 /* AppDelegate.swift in Sources */,
 				EAD017E61CE78D9F00A87055 /* Credentials.swift in Sources */,
 				EAC0A6711CDBA8CC000CB230 /* LoginViewController+LoginView.swift in Sources */,
+				EAFF2C321CEE24DC0025FC27 /* Credentials+NSURL.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -844,6 +851,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAFF2C301CEE22F80025FC27 /* CredentialsTest.swift in Sources */,
 				EA53501F1CD8CC9E0041381F /* SpyLoginService.swift in Sources */,
 				EAA7DEF81CDA622600BEF317 /* FakeRemoteLoginService.swift in Sources */,
 				EA129C0F1CD2381C003DBD34 /* LoginPresenterTests.swift in Sources */,

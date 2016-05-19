@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(application: UIApplication, handleOpenURL url: NSURL) -> Bool {
+        let credentials = Credentials(url: url)
         return true
     }
 }
