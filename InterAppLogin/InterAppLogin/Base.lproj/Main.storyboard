@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -26,13 +27,25 @@
                                     <action selector="login" destination="BYZ-38-t0r" eventType="touchUpInside" id="nOa-3y-mkj"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wd8-zq-GN6">
+                                <rect key="frame" x="20" y="277" width="560" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="wd8-zq-GN6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="9h5-ya-xqV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wd8-zq-GN6" secondAttribute="trailing" id="D26-vf-637"/>
+                            <constraint firstItem="f34-37-d8e" firstAttribute="top" secondItem="wd8-zq-GN6" secondAttribute="bottom" constant="8" id="EJU-Qu-5Aa"/>
                             <constraint firstItem="f34-37-d8e" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Kff-DM-jv5"/>
                             <constraint firstItem="f34-37-d8e" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xVe-7i-OXi"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="resultLabel" destination="wd8-zq-GN6" id="s60-T8-kNY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

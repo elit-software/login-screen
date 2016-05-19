@@ -2,6 +2,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var resultLabel: UILabel!
+
     let application = UIApplication.sharedApplication()
 
     @IBAction func login() {
