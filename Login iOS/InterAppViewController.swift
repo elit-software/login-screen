@@ -1,6 +1,6 @@
 import UIKit
 
-class InterAppViewController: UIViewController, LoginView {
+class InterAppViewController: UIViewController {
 
     var credentials = Credentials(username: "", password: "")
     var activityIndicator: UIActivityIndicatorView?
@@ -31,23 +31,5 @@ class InterAppViewController: UIViewController, LoginView {
         let viewBounds = view.bounds
         let center = CGPoint(x: CGRectGetMidX(viewBounds), y: CGRectGetMidY(viewBounds))
         self.activityIndicator?.center = center
-    }
-
-    func showUsernameIsEmpty() {
-    }
-
-    func showPasswordIsEmpty() {
-    }
-
-    func showCredentialsAreValid() {
-    }
-
-    func showCredentialsAreNotValid() {
-    }
-
-    func showLoadingInterface() {
-    }
-
-    func hideLoadingInterface() {
     }
 }
