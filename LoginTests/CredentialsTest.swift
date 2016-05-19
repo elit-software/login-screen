@@ -1,7 +1,8 @@
 import XCTest
 @testable import Login
 
-class CredentialsTest: XCTestCase {   
+class CredentialsTest: XCTestCase {
+
     func testExample() {
         let url = NSURL(string: "Login://"
             + "?"

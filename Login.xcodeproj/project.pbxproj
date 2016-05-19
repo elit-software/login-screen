@@ -53,6 +53,7 @@
 		EAD017F91CE791F300A87055 /* RemoteLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD017F31CE791EC00A87055 /* RemoteLoginService.swift */; };
 		EAFF2C301CEE22F80025FC27 /* CredentialsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFF2C2F1CEE22F80025FC27 /* CredentialsTest.swift */; };
 		EAFF2C321CEE24DC0025FC27 /* Credentials+NSURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFF2C311CEE24DC0025FC27 /* Credentials+NSURL.swift */; };
+		EAFF2C361CEE255A0025FC27 /* InterAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFF2C351CEE255A0025FC27 /* InterAppViewController.swift */; };
 		F07B89A6B55E1277AB640F9E /* Pods_Login.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 252BA554DA46ECA1E425B091 /* Pods_Login.framework */; };
 /* End PBXBuildFile section */
 
@@ -141,6 +142,7 @@
 		EAD017F31CE791EC00A87055 /* RemoteLoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RemoteLoginService.swift; path = CrossPlatform/Sources/RemoteLoginService.swift; sourceTree = SOURCE_ROOT; };
 		EAFF2C2F1CEE22F80025FC27 /* CredentialsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CredentialsTest.swift; sourceTree = "<group>"; };
 		EAFF2C311CEE24DC0025FC27 /* Credentials+NSURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Credentials+NSURL.swift"; sourceTree = "<group>"; };
+		EAFF2C351CEE255A0025FC27 /* InterAppViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterAppViewController.swift; sourceTree = "<group>"; };
 		F231FA71B21667C5FE3C463A /* Pods_Login_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Login_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5A2BF3C5B48F4D39F0747B8 /* Pods-Login macOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Login macOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Login macOS/Pods-Login macOS.debug.xcconfig"; sourceTree = "<group>"; };
 		F9892E4C6FAC1BDB882DDFDB /* Pods-Login iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Login iOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Login iOS/Pods-Login iOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -257,6 +259,7 @@
 				EA129BFB1CD2381C003DBD34 /* LoginViewController.swift */,
 				EA129BFD1CD2381C003DBD34 /* Main.storyboard */,
 				EAFF2C311CEE24DC0025FC27 /* Credentials+NSURL.swift */,
+				EAFF2C351CEE255A0025FC27 /* InterAppViewController.swift */,
 			);
 			path = "Login iOS";
 			sourceTree = "<group>";
@@ -832,6 +835,7 @@
 				EAD017F41CE791EC00A87055 /* LoginService.swift in Sources */,
 				EA261B2A1CDB6DF5006AD9D6 /* LoginServiceFactory.swift in Sources */,
 				EA49382A1CDD033700C07876 /* Token+SwiftyJSON.swift in Sources */,
+				EAFF2C361CEE255A0025FC27 /* InterAppViewController.swift in Sources */,
 				EA261B2E1CDB70C9006AD9D6 /* AlertUtilities.swift in Sources */,
 				EAD017E51CE78D8F00A87055 /* Token.swift in Sources */,
 				EAD017F51CE791EC00A87055 /* LoginServiceDelegate.swift in Sources */,

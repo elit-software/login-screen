@@ -3,6 +3,23 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "Credentials.init(url : NSURL) -&gt; Credentials:AppDelegate.swift">
+      </ContextState>
+      <ContextState
+         contextName = "Credentials.init(url : NSURL) -&gt; Credentials?:AppDelegate.swift">
+      </ContextState>
+      <ContextState
+         contextName = "AppDelegate.application(UIApplication, handleOpenURL : NSURL) -&gt; Bool:AppDelegate.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "window?.rootViewController?.navigationController">
+            </PersistentString>
+            <PersistentString
+               value = "window?.rootViewController as? UINavigationController">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "NSTextField.flashBackgroundWithRed() -&gt; ():LoginViewController+LoginView.swift">
          <PersistentStrings>
             <PersistentString
