@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1DF3EAB96ECBDE2864AB1E0D /* Pods_Login_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F97F176C2858D197C37B416 /* Pods_Login_iOS.framework */; };
 		BC14140DE390CF1D845D59A7 /* Pods_LoginUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 274267CB70D68C2CDAD2E73F /* Pods_LoginUITests.framework */; };
 		D0E25D847C8D0B527DF76EF3 /* Pods_Login_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F231FA71B21667C5FE3C463A /* Pods_Login_macOS.framework */; };
 		DF2A0DDA7BB7C43422B5770B /* Pods_LoginTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 477CDF32D3E5116AE88DBD3C /* Pods_LoginTests.framework */; };
@@ -148,7 +147,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DF3EAB96ECBDE2864AB1E0D /* Pods_Login_iOS.framework in Frameworks */,
 				F07B89A6B55E1277AB640F9E /* Pods_Login.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

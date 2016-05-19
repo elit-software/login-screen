@@ -16,4 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UIView.setAnimationsEnabled(false)
         }
     }
+
+    func application(application: UIApplication, handleOpenURL url: NSURL) -> Bool {
+        return true
+    }
 }
