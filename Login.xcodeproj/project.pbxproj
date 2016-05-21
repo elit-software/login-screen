@@ -260,9 +260,7 @@
 				EAC0A6701CDBA8CC000CB230 /* LoginViewController+LoginView.swift */,
 				EA129BFB1CD2381C003DBD34 /* LoginViewController.swift */,
 				EA129BFD1CD2381C003DBD34 /* Main.storyboard */,
-				EAFF2C311CEE24DC0025FC27 /* Credentials+NSURL.swift */,
-				EAFF2C351CEE255A0025FC27 /* InterAppViewController.swift */,
-				EAFF2C371CEE2B970025FC27 /* InterAppViewController+LoginView.swift */,
+				EA3482501CF0BC0F0066DEF6 /* InterApp */,
 			);
 			path = "Login iOS";
 			sourceTree = "<group>";
@@ -304,6 +302,16 @@
 				EA4938281CDD033700C07876 /* Token+SwiftyJSON.swift */,
 			);
 			path = "Login Service";
+			sourceTree = "<group>";
+		};
+		EA3482501CF0BC0F0066DEF6 /* InterApp */ = {
+			isa = PBXGroup;
+			children = (
+				EAFF2C311CEE24DC0025FC27 /* Credentials+NSURL.swift */,
+				EAFF2C351CEE255A0025FC27 /* InterAppViewController.swift */,
+				EAFF2C371CEE2B970025FC27 /* InterAppViewController+LoginView.swift */,
+			);
+			name = InterApp;
 			sourceTree = "<group>";
 		};
 		EA35E4861CE73ABC005CFE53 /* Login macOS */ = {
