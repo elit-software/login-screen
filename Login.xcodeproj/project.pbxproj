@@ -112,7 +112,7 @@
 		EA261B2B1CDB6ED7006AD9D6 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
 		EA261B2D1CDB70C9006AD9D6 /* AlertUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = AlertUtilities.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		EA35E4851CE73ABC005CFE53 /* Login macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Login macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA35E4871CE73ABC005CFE53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EA35E4871CE73ABC005CFE53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
 		EA35E4891CE73ABC005CFE53 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EA35E48B1CE73ABC005CFE53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA35E48E1CE73ABC005CFE53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -225,16 +225,16 @@
 		EA129BED1CD2381B003DBD34 = {
 			isa = PBXGroup;
 			children = (
-				EA8B0D571CE776F0001239F4 /* Apple OS */,
-				468718DCFC1094F2CBF6242A /* Frameworks */,
-				EAD017F01CE78E3600A87055 /* Cross Platform */,
 				EA5350151CD8C6600041381F /* Login */,
+				EA8B0D571CE776F0001239F4 /* Apple OS */,
+				EAD017F01CE78E3600A87055 /* Cross Platform */,
 				EA129BF81CD2381C003DBD34 /* Login iOS */,
 				EA129C181CD2381C003DBD34 /* Login iOS UITests */,
 				EA35E4861CE73ABC005CFE53 /* Login macOS */,
 				EA35E4981CE73ABC005CFE53 /* Login macOS UITests */,
 				EA129C0D1CD2381C003DBD34 /* LoginTests */,
 				79D4EC754FA3E930FF33F29D /* Pods */,
+				468718DCFC1094F2CBF6242A /* Frameworks */,
 				EA129BF71CD2381C003DBD34 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -256,9 +256,8 @@
 			children = (
 				EA5350201CD8CCBC0041381F /* Supporting Files */,
 				EA261B2F1CDB724A006AD9D6 /* Utilities */,
-				EA129BF91CD2381C003DBD34 /* AppDelegate.swift */,
-				EAC0A6701CDBA8CC000CB230 /* LoginViewController+LoginView.swift */,
 				EA129BFB1CD2381C003DBD34 /* LoginViewController.swift */,
+				EAC0A6701CDBA8CC000CB230 /* LoginViewController+LoginView.swift */,
 				EA129BFD1CD2381C003DBD34 /* Main.storyboard */,
 				EA3482501CF0BC0F0066DEF6 /* InterApp */,
 			);
@@ -307,6 +306,7 @@
 		EA3482501CF0BC0F0066DEF6 /* InterApp */ = {
 			isa = PBXGroup;
 			children = (
+				EA129BF91CD2381C003DBD34 /* AppDelegate.swift */,
 				EAFF2C311CEE24DC0025FC27 /* Credentials+NSURL.swift */,
 				EAFF2C351CEE255A0025FC27 /* InterAppViewController.swift */,
 				EAFF2C371CEE2B970025FC27 /* InterAppViewController+LoginView.swift */,
@@ -318,9 +318,8 @@
 			isa = PBXGroup;
 			children = (
 				EA35E4A21CE73DFE005CFE53 /* Supporting Files */,
-				EA35E4871CE73ABC005CFE53 /* AppDelegate.swift */,
-				EA8B0D501CE773DA001239F4 /* LoginViewController+LoginView.swift */,
 				EA35E4891CE73ABC005CFE53 /* LoginViewController.swift */,
+				EA8B0D501CE773DA001239F4 /* LoginViewController+LoginView.swift */,
 				EA35E48D1CE73ABC005CFE53 /* Main.storyboard */,
 			);
 			path = "Login macOS";
@@ -338,6 +337,7 @@
 		EA35E4A21CE73DFE005CFE53 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EA35E4871CE73ABC005CFE53 /* AppDelegate.swift */,
 				EA35E48B1CE73ABC005CFE53 /* Assets.xcassets */,
 				EA35E4901CE73ABC005CFE53 /* Info.plist */,
 			);
