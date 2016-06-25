@@ -23,6 +23,7 @@ extension InterAppViewController: LoginView {
 
     func returnWithMessage(message: String) {
         openURL(buildURL(message))
+        dismissViewControllerAnimated(false, completion: nil)
     }
 
     func buildURL(message: String) -> NSURL {
