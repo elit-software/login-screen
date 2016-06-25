@@ -3,7 +3,7 @@ extension LoginController: LoginView {
     var credentials: Credentials {
         return Credentials(username: username, password: password)
     }
-    
+
     func showUsernameIsEmpty() {
         print("Username Is Empty")
     }

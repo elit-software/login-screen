@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UIView.setAnimationsEnabled(false)
         }
     }
-    
+
     func application(application: UIApplication, handleOpenURL url: NSURL) -> Bool {
         (window?.rootViewController as? ViewController)?.resultLabel.text = url.absoluteString
         return true
