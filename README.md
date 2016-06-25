@@ -2,7 +2,7 @@
 
 Sample Application to demonstrate how to write Framework Independent Applications with Swift
 
-The slides of the presentation can be found [here](http://bit.ly/245EFUa)
+The slides of the presentation can be found [here](https://speakerdeck.com/tiagomartinho/framework-independent-applications-with-swift)
 
 ## Requirements
 
