@@ -8,7 +8,8 @@ The slides of the presentation can be found [here](http://bit.ly/245EFUa)
 
 For the iOS/macOS application:
 * OSX 10.10.5 or higher
-* Xcode 7.3 or higher (download it from app store)
+* Xcode 7.3.1 or higher
+* Swift 2.2 toolchain
 
 For the command-line Swift application:
 * OSX 10.10.5 or higher OR Ubuntu 15.10 or 14.04
@@ -19,6 +20,11 @@ For the command-line Swift application:
 To compile/run the iOS application:
 * open the Xcode Workspace Login.xcworkspace
 * select the Login iOS scheme
+* Run by pressing Play or by pressing [Cmd + R]
+
+To compile/run the Inter iOS application:
+* open the Xcode Workspace Login.xcworkspace
+* select the InterAppLogin scheme
 * Run by pressing Play or by pressing [Cmd + R]
 
 To compile/run the macOS application:
