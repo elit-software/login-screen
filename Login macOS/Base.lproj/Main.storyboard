@@ -682,7 +682,7 @@
                                 </textFieldCell>
                                 <accessibility identifier="username"/>
                             </textField>
-                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ela-pq-1hk" customClass="NSSecureTextField">
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ela-pq-1hk">
                                 <rect key="frame" x="20" y="196" width="440" height="22"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Password" drawsBackground="YES" id="Tel-b3-hZu">
                                     <font key="font" metaFont="system"/>

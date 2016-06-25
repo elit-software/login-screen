@@ -34,7 +34,7 @@ class LoginUITests: XCTestCase {
         insertText("password", inTextField: passwordTextField)
         loginButton?.click()
 
-        sleep(1)
+        waitForElement("label")
 
         let label = application.staticTexts.elementMatchingType(.Any, identifier: "label")
         XCTAssertEqual("42", label.value as? String)
@@ -43,5 +43,16 @@ class LoginUITests: XCTestCase {
     func insertText(text: String, inTextField textField: XCUIElement?) {
         textField?.click()
         textField?.typeText(text)
+    }
+
+    func waitForElement(element: String, WithTimeOut timeout: Double = 60.0) {
+        var elapsed = 0.0
+        while elapsed < timeout {
+            if application.staticTexts.elementMatchingType(.Any, identifier: element).exists {
+                break
+            }
+            elapsed += 1.0
+            sleep(1)
+        }
     }
 }
