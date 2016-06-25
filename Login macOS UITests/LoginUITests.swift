@@ -48,7 +48,7 @@ class LoginUITests: XCTestCase {
     func waitForElement(element: String, WithTimeOut timeout: Double = 60.0) {
         var elapsed = 0.0
         while elapsed < timeout {
-            if application.staticTexts.elementMatchingType(.Any, identifier: element).exists {
+            if application.staticTexts.elementMatchingType(.Any, identifier: element).value != nil {
                 break
             }
             elapsed += 1.0
