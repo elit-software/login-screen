@@ -142,6 +142,7 @@
 		EAD017F21CE791EC00A87055 /* LoginServiceDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginServiceDelegate.swift; path = CrossPlatform/Sources/LoginServiceDelegate.swift; sourceTree = SOURCE_ROOT; };
 		EAD017F31CE791EC00A87055 /* RemoteLoginService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RemoteLoginService.swift; path = CrossPlatform/Sources/RemoteLoginService.swift; sourceTree = SOURCE_ROOT; };
 		EAEF43931D1E9C1300D0E2C3 /* DummyService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DummyService.swift; path = CrossPlatform/Sources/DummyService.swift; sourceTree = SOURCE_ROOT; };
+		EAEF43951D1E9C6C00D0E2C3 /* LoginController+LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "LoginController+LoginView.swift"; path = "CrossPlatform/Sources/LoginController+LoginView.swift"; sourceTree = SOURCE_ROOT; };
 		EAFF2C2F1CEE22F80025FC27 /* CredentialsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CredentialsTest.swift; sourceTree = "<group>"; };
 		EAFF2C311CEE24DC0025FC27 /* Credentials+NSURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Credentials+NSURL.swift"; sourceTree = "<group>"; };
 		EAFF2C351CEE255A0025FC27 /* InterAppViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterAppViewController.swift; sourceTree = "<group>"; };
@@ -451,6 +452,7 @@
 				EAD017EE1CE78E2D00A87055 /* Package.swift */,
 				EAD017DF1CE78D8E00A87055 /* main.swift */,
 				EABEA97A1CEB3E9800BD87BE /* LoginController.swift */,
+				EAEF43951D1E9C6C00D0E2C3 /* LoginController+LoginView.swift */,
 				EAEF43931D1E9C1300D0E2C3 /* DummyService.swift */,
 				EABEA97B1CEB43BC00BD87BE /* Token+AnyObject.swift */,
 				EABEA97C1CEB452600BD87BE /* MainController.swift */,
