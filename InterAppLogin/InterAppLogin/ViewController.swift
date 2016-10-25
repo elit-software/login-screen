@@ -4,10 +4,10 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var resultLabel: UILabel!
 
-    let application = UIApplication.sharedApplication()
+    let application = UIApplication.shared
 
     @IBAction func login() {
-        openURL(buildURL())
+        openURL(url: buildURL())
     }
 
     func buildURL() -> NSURL {
@@ -19,6 +19,6 @@ class ViewController: UIViewController {
     }
 
     func openURL(url: NSURL) {
-        application.openURL(url)
+        application.openURL(url as URL)
     }
 }

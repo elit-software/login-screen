@@ -4,19 +4,20 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
-    func application(application: UIApplication,
-                     didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions
+        launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
         disableAnimationsForTests()
         return true
     }
 
     func disableAnimationsForTests() {
-        if NSProcessInfo.processInfo().environment["animations"] == "0" {
+        if ProcessInfo.processInfo.environment["animations"] == "0" {
             UIView.setAnimationsEnabled(false)
         }
     }
 
-    func application(application: UIApplication, handleOpenURL url: NSURL) -> Bool {
+    func application(_ application: UIApplication, handleOpen url: URL) -> Bool {
         (window?.rootViewController as? ViewController)?.resultLabel.text = url.absoluteString
         return true
     }
