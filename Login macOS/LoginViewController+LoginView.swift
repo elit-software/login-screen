@@ -6,30 +6,30 @@ extension LoginViewController: LoginView {
     }
 
     func showUsernameIsEmpty() {
-        username.backgroundColor = NSColor.redColor()
+        username.backgroundColor = NSColor.red
     }
 
     func showPasswordIsEmpty() {
-        password.backgroundColor = NSColor.redColor()
+        password.backgroundColor = NSColor.red
     }
 
     func showCredentialsAreValid() {
-        performSegueWithIdentifier("Main", sender: self)
+        performSegue(withIdentifier: "Main", sender: self)
     }
 
     func showCredentialsAreNotValid() {
-        invalidCredentials.hidden = false
+        invalidCredentials.isHidden = false
     }
 
     func showLoadingInterface() {
         progressIndicator.startAnimation(self)
-        progressIndicator.hidden = false
-        loginButton.hidden = true
+        progressIndicator.isHidden = false
+        loginButton.isHidden = true
     }
 
     func hideLoadingInterface() {
         progressIndicator.stopAnimation(self)
-        progressIndicator.hidden = true
-        loginButton.hidden = false
+        progressIndicator.isHidden = true
+        loginButton.isHidden = false
     }
 }

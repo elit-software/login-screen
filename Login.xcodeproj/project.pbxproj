@@ -1176,6 +1176,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "tm.Login-macOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -1193,6 +1194,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "tm.Login-macOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -1207,6 +1209,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "tm.Login-macOSUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "Login macOS";
 			};
 			name = Debug;
@@ -1222,6 +1225,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "tm.Login-macOSUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "Login macOS";
 			};
 			name = Release;

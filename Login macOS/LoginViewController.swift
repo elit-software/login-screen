@@ -16,13 +16,13 @@ class LoginViewController: NSViewController, NSTextFieldDelegate {
         presenter = LoginPresenter(view: self, service: service)
     }
 
-    @IBAction func login(sender: AnyObject) {
+    @IBAction func login(_ sender: AnyObject) {
         presenter?.login()
     }
 
-    override func controlTextDidChange(obj: NSNotification) {
-        username.backgroundColor = NSColor.whiteColor()
-        password.backgroundColor = NSColor.whiteColor()
-        invalidCredentials.hidden = true
+    override func controlTextDidChange(_ obj: Notification) {
+        username.backgroundColor = NSColor.white
+        password.backgroundColor = NSColor.white
+        invalidCredentials.isHidden = true
     }
 }
