@@ -27,16 +27,16 @@ class InterAppLoginUITests: XCTestCase {
     func testLogin() {
         loginButton?.tap()
 
-        waitForElement("result")
+        waitForElement(element: "result")
 
-        let result = application.staticTexts.elementMatchingType(.Any, identifier: "result")
+        let result = application.staticTexts.element(matching: .any, identifier: "result")
         XCTAssertEqual("InterAppLogin://?message=CredentialsAreValid", result.label)
     }
 
     func waitForElement(element: String, WithTimeOut timeout: Double = 60.0) {
         var elapsed = 0.0
         while elapsed < timeout {
-            if application.staticTexts.elementMatchingType(.Any, identifier: element).exists {
+            if application.staticTexts.element(matching: .any, identifier: element).exists {
                 break
             }
             elapsed += 1.0
