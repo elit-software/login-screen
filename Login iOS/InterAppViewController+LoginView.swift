@@ -3,27 +3,27 @@ import UIKit
 extension InterAppViewController: LoginView {
 
     func showUsernameIsEmpty() {
-        returnWithMessage("UsernameIsEmpty")
+        returnWithMessage(message: "UsernameIsEmpty")
     }
 
     func showPasswordIsEmpty() {
-        returnWithMessage("PasswordIsEmpty")
+        returnWithMessage(message: "PasswordIsEmpty")
     }
 
     func showCredentialsAreValid() {
-        returnWithMessage("CredentialsAreValid")
+        returnWithMessage(message: "CredentialsAreValid")
     }
 
     func showCredentialsAreNotValid() {
-        returnWithMessage("CredentialsAreNotValid")
+        returnWithMessage(message: "CredentialsAreNotValid")
     }
 
     func showLoadingInterface() { }
     func hideLoadingInterface() { }
 
     func returnWithMessage(message: String) {
-        openURL(buildURL(message))
-        dismissViewControllerAnimated(false, completion: nil)
+        openURL(url: buildURL(message: message))
+        dismiss(animated: false, completion: nil)
     }
 
     func buildURL(message: String) -> NSURL {
@@ -33,6 +33,6 @@ extension InterAppViewController: LoginView {
     }
 
     func openURL(url: NSURL) {
-        UIApplication.sharedApplication().openURL(url)
+        UIApplication.shared.openURL(url as URL)
     }
 }

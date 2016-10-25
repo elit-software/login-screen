@@ -2,11 +2,11 @@ import UIKit
 
 extension UITextField {
     func flashBackgroundWithRed() {
-        UIView.animateWithDuration(0.5, animations: { [unowned self] in
-            self.backgroundColor = UIColor.redColor()
+        UIView.animate(withDuration: 0.5, animations: { [unowned self] in
+            self.backgroundColor = UIColor.red
         }) { (_) -> Void in
-            UIView.animateWithDuration(0.5, animations: { [unowned self] in
-                self.backgroundColor = UIColor.whiteColor()
+            UIView.animate(withDuration: 0.5, animations: { [unowned self] in
+                self.backgroundColor = UIColor.white
                 })
         }
     }

@@ -2,13 +2,13 @@ import Alamofire
 
 class AlamofireLoginService: RemoteLoginService {
 
-    func get(url url: String, credentials: Credentials, callback: AnyObject? -> Void) {
+    func get(url: String, credentials: Credentials, callback: @escaping ((Any?) -> Void)) {
         let parameters = [
             "username": credentials.username,
             "password": credentials.password
         ]
 
-        Alamofire.request(.POST, url, parameters: parameters, encoding: .JSON)
+        Alamofire.request(url, method: HTTPMethod.post, parameters: parameters)
             .validate()
             .responseJSON { callback($0.data) }
     }

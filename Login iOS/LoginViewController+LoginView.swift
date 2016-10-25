@@ -13,20 +13,22 @@ extension LoginViewController: LoginView {
     }
 
     func showCredentialsAreValid() {
-        performSegueWithIdentifier("Main", sender: self)
+        performSegue(withIdentifier: "Main", sender: self)
     }
 
     func showCredentialsAreNotValid() {
-        AlertUtilities.displayAlertWithMessage("Credentials are not valid", InViewController: self)
+        let message = "Credentials are not valid"
+        AlertUtilities.displayAlertWithMessage(message: message,
+                                               InViewController: self)
     }
 
     func showLoadingInterface() {
-        loginButton.hidden = true
+        loginButton.isHidden = true
         activityIndicator.startAnimating()
     }
 
     func hideLoadingInterface() {
-        loginButton.hidden = false
+        loginButton.isHidden = false
         activityIndicator.stopAnimating()
     }
 }

@@ -8,19 +8,19 @@ class InterAppViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.whiteColor()
+        view.backgroundColor = UIColor.white
         initLoadingInterface()
         let service = LoginServiceFactory.build()
         presenter = LoginPresenter(view: self, service: service)
     }
 
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         presenter?.login()
     }
 
     func initLoadingInterface() {
-        let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .Gray)
+        let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
         self.view.addSubview(activityIndicator)
         self.activityIndicator = activityIndicator
         self.activityIndicator?.startAnimating()
@@ -29,7 +29,7 @@ class InterAppViewController: UIViewController {
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         let viewBounds = view.bounds
-        let center = CGPoint(x: CGRectGetMidX(viewBounds), y: CGRectGetMidY(viewBounds))
+        let center = CGPoint(x: viewBounds.midX, y: viewBounds.midY)
         self.activityIndicator?.center = center
     }
 }

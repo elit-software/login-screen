@@ -15,7 +15,7 @@ class LoginViewController: UIViewController {
         presenter = LoginPresenter(view: self, service: service)
     }
 
-    @IBAction func login(sender: UIButton) {
+    @IBAction func login() {
         presenter?.login()
     }
 }
