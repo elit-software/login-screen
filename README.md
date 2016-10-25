@@ -7,13 +7,14 @@ The slides of the presentation can be found [here](https://speakerdeck.com/tiago
 ## Requirements
 
 For the iOS/macOS application:
-* OSX 10.10.5 or higher
-* Xcode 7.3.1 or higher
-* Swift 2.2 toolchain
+* OSX 10.11 or higher
+* iOS 9.3 or higher
+* Xcode 8.0 or higher
+* Swift 3.0 toolchain
 
 For the command-line Swift application:
-* OSX 10.10.5 or higher OR Ubuntu 15.10 or 14.04
-* Latest Trunk Development Snapshot of Swift (instructions on how to install it can be found [here](https://swift.org/download/))
+* OSX 10.11 or higher OR Ubuntu 15.10 or 14.04
+* Latest Trunk Development Snapshot of Swift 3.0 toolchain (instructions on how to install it can be found [here](https://swift.org/download/))
 
 ## Installation
 
