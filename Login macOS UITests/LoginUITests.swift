@@ -30,13 +30,13 @@ class LoginUITests: XCTestCase {
     }
 
     func testLogin() {
-        insertText("username", inTextField: usernameTextField)
-        insertText("password", inTextField: passwordTextField)
+        insertText(text: "username", inTextField: usernameTextField)
+        insertText(text: "password", inTextField: passwordTextField)
         loginButton?.click()
 
-        waitForElement("label")
+        waitForElement(element: "label")
 
-        let label = application.staticTexts.elementMatchingType(.Any, identifier: "label")
+        let label = application.staticTexts.element(matching: .any, identifier: "label")
         XCTAssertEqual("42", label.value as? String)
     }
 
@@ -48,7 +48,7 @@ class LoginUITests: XCTestCase {
     func waitForElement(element: String, WithTimeOut timeout: Double = 60.0) {
         var elapsed = 0.0
         while elapsed < timeout {
-            if application.staticTexts.elementMatchingType(.Any, identifier: element).value != nil {
+            if application.staticTexts.element(matching: .any, identifier: element).value != nil {
                 break
             }
             elapsed += 1.0
