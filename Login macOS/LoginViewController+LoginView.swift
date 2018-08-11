@@ -14,7 +14,7 @@ extension LoginViewController: LoginView {
     }
 
     func showCredentialsAreValid() {
-        performSegue(withIdentifier: "Main", sender: self)
+        performSegue(withIdentifier: NSStoryboardSegue.Identifier(rawValue: "Main"), sender: self)
     }
 
     func showCredentialsAreNotValid() {
