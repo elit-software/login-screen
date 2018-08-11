@@ -6,6 +6,9 @@ end
 target 'Login' do
     platform :ios, '9.0'
     appDependencies
+    target 'LoginTests' do
+        inherit! :search_paths
+    end
 end
 
 target 'Login macOS' do
