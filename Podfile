@@ -1,3 +1,5 @@
+inhibit_all_warnings!
+
 def appDependencies
     pod 'Alamofire'
     pod 'SwiftyJSON'
