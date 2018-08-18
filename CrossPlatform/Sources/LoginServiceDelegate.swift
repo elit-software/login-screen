@@ -1,4 +1,4 @@
-protocol LoginServiceDelegate {
+protocol LoginServiceDelegate: class {
     func credentialsAreValid()
     func credentialsAreNotValid()
 }
