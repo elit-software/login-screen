@@ -7,7 +7,7 @@ extension Credentials {
             return nil
         }
         let parameters = components[1]
-        let credentials = parameters.components(separatedBy:"&")
+        let credentials = parameters.components(separatedBy: "&")
         if credentials.count != 2 {
             return nil
         }
