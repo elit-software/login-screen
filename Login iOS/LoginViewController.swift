@@ -2,10 +2,10 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
-    @IBOutlet weak var username: UITextField!
-    @IBOutlet weak var password: UITextField!
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet var username: UITextField!
+    @IBOutlet var password: UITextField!
+    @IBOutlet var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet var loginButton: UIButton!
 
     var presenter: LoginPresenter?
 

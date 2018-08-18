@@ -2,11 +2,11 @@ import Cocoa
 
 class LoginViewController: NSViewController, NSTextFieldDelegate {
 
-    @IBOutlet weak var username: NSTextField! { didSet { username.delegate = self } }
-    @IBOutlet weak var password: NSTextField! { didSet { password.delegate = self } }
-    @IBOutlet weak var invalidCredentials: NSTextField!
-    @IBOutlet weak var progressIndicator: NSProgressIndicator!
-    @IBOutlet weak var loginButton: NSButton!
+    @IBOutlet var username: NSTextField! { didSet { username.delegate = self } }
+    @IBOutlet var password: NSTextField! { didSet { password.delegate = self } }
+    @IBOutlet var invalidCredentials: NSTextField!
+    @IBOutlet var progressIndicator: NSProgressIndicator!
+    @IBOutlet var loginButton: NSButton!
 
     var presenter: LoginPresenter?
 
@@ -16,11 +16,11 @@ class LoginViewController: NSViewController, NSTextFieldDelegate {
         presenter = LoginPresenter(view: self, service: service)
     }
 
-    @IBAction func login(_ sender: AnyObject) {
+    @IBAction func login(_: AnyObject) {
         presenter?.login()
     }
 
-    override func controlTextDidChange(_ obj: Notification) {
+    override func controlTextDidChange(_: Notification) {
         username.backgroundColor = NSColor.white
         password.backgroundColor = NSColor.white
         invalidCredentials.isHidden = true

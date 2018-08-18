@@ -1,5 +1,5 @@
 extension Token {
-    init(data: AnyObject?) {
-        self.token = ""
+    init(data _: AnyObject?) {
+        token = ""
     }
 }

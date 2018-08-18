@@ -18,8 +18,8 @@ extension InterAppViewController: LoginView {
         returnWithMessage(message: "CredentialsAreNotValid")
     }
 
-    func showLoadingInterface() { }
-    func hideLoadingInterface() { }
+    func showLoadingInterface() {}
+    func hideLoadingInterface() {}
 
     func returnWithMessage(message: String) {
         openURL(url: buildURL(message: message))

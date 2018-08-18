@@ -21,7 +21,7 @@ class InterAppViewController: UIViewController {
 
     func initLoadingInterface() {
         let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
-        self.view.addSubview(activityIndicator)
+        view.addSubview(activityIndicator)
         self.activityIndicator = activityIndicator
         self.activityIndicator?.startAnimating()
     }
@@ -30,6 +30,6 @@ class InterAppViewController: UIViewController {
         super.viewWillLayoutSubviews()
         let viewBounds = view.bounds
         let center = CGPoint(x: viewBounds.midX, y: viewBounds.midY)
-        self.activityIndicator?.center = center
+        activityIndicator?.center = center
     }
 }

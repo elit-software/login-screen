@@ -72,7 +72,7 @@ extension Request {
 
     // MARK: Properties
 
-    fileprivate var acceptableStatusCodes: [Int] { return Array(200..<300) }
+    fileprivate var acceptableStatusCodes: [Int] { return Array(200 ..< 300) }
 
     fileprivate var acceptableContentTypes: [String] {
         if let accept = request?.value(forHTTPHeaderField: "Accept") {
@@ -88,8 +88,7 @@ extension Request {
         statusCode acceptableStatusCodes: S,
         response: HTTPURLResponse)
         -> ValidationResult
-        where S.Iterator.Element == Int
-    {
+        where S.Iterator.Element == Int {
         if acceptableStatusCodes.contains(response.statusCode) {
             return .success
         } else {
@@ -105,8 +104,7 @@ extension Request {
         response: HTTPURLResponse,
         data: Data?)
         -> ValidationResult
-        where S.Iterator.Element == String
-    {
+        where S.Iterator.Element == String {
         guard let data = data, data.count > 0 else { return .success }
 
         guard
@@ -166,8 +164,7 @@ extension DataRequest {
             if
                 let response = self.response,
                 self.delegate.error == nil,
-                case let .failure(error) = validation(self.request, response, self.delegate.data)
-            {
+                case let .failure(error) = validation(self.request, response, self.delegate.data) {
                 self.delegate.error = error
             }
         }
@@ -187,7 +184,7 @@ extension DataRequest {
     @discardableResult
     public func validate<S: Sequence>(statusCode acceptableStatusCodes: S) -> Self where S.Iterator.Element == Int {
         return validate { [unowned self] _, response, _ in
-            return self.validate(statusCode: acceptableStatusCodes, response: response)
+            self.validate(statusCode: acceptableStatusCodes, response: response)
         }
     }
 
@@ -201,7 +198,7 @@ extension DataRequest {
     @discardableResult
     public func validate<S: Sequence>(contentType acceptableContentTypes: S) -> Self where S.Iterator.Element == String {
         return validate { [unowned self] _, response, data in
-            return self.validate(contentType: acceptableContentTypes, response: response, data: data)
+            self.validate(contentType: acceptableContentTypes, response: response, data: data)
         }
     }
 
@@ -213,7 +210,7 @@ extension DataRequest {
     /// - returns: The request.
     @discardableResult
     public func validate() -> Self {
-        return validate(statusCode: self.acceptableStatusCodes).validate(contentType: self.acceptableContentTypes)
+        return validate(statusCode: acceptableStatusCodes).validate(contentType: acceptableContentTypes)
     }
 }
 
@@ -246,8 +243,7 @@ extension DownloadRequest {
             if
                 let response = self.response,
                 self.delegate.error == nil,
-                case let .failure(error) = validation(request, response, temporaryURL, destinationURL)
-            {
+                case let .failure(error) = validation(request, response, temporaryURL, destinationURL) {
                 self.delegate.error = error
             }
         }
@@ -267,7 +263,7 @@ extension DownloadRequest {
     @discardableResult
     public func validate<S: Sequence>(statusCode acceptableStatusCodes: S) -> Self where S.Iterator.Element == Int {
         return validate { [unowned self] _, response, _, _ in
-            return self.validate(statusCode: acceptableStatusCodes, response: response)
+            self.validate(statusCode: acceptableStatusCodes, response: response)
         }
     }
 
@@ -304,6 +300,6 @@ extension DownloadRequest {
     /// - returns: The request.
     @discardableResult
     public func validate() -> Self {
-        return validate(statusCode: self.acceptableStatusCodes).validate(contentType: self.acceptableContentTypes)
+        return validate(statusCode: acceptableStatusCodes).validate(contentType: acceptableContentTypes)
     }
 }

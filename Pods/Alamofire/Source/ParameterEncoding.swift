@@ -29,13 +29,13 @@ import Foundation
 /// See https://tools.ietf.org/html/rfc7231#section-4.3
 public enum HTTPMethod: String {
     case options = "OPTIONS"
-    case get     = "GET"
-    case head    = "HEAD"
-    case post    = "POST"
-    case put     = "PUT"
-    case patch   = "PATCH"
-    case delete  = "DELETE"
-    case trace   = "TRACE"
+    case get = "GET"
+    case head = "HEAD"
+    case post = "POST"
+    case put = "PUT"
+    case patch = "PATCH"
+    case delete = "DELETE"
+    case trace = "TRACE"
     case connect = "CONNECT"
 }
 
@@ -325,8 +325,7 @@ public struct PropertyListEncoding: ParameterEncoding {
     /// - returns: The new `PropertyListEncoding` instance.
     public init(
         format: PropertyListSerialization.PropertyListFormat = .xml,
-        options: PropertyListSerialization.WriteOptions = 0)
-    {
+        options: PropertyListSerialization.WriteOptions = 0) {
         self.format = format
         self.options = options
     }

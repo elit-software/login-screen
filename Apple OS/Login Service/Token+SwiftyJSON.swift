@@ -9,6 +9,6 @@ extension Token {
     }
 
     init(json: JSON) {
-        self.token = json["token"].stringValue
+        token = json["token"].stringValue
     }
 }

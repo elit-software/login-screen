@@ -2,7 +2,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet var resultLabel: UILabel!
 
     let application = UIApplication.shared
 

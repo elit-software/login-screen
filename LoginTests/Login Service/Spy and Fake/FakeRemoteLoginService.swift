@@ -9,7 +9,7 @@ class FakeRemoteLoginService: RemoteLoginService {
         self.validCredentials = validCredentials
     }
 
-    func get(url: String, credentials: Credentials, callback: @escaping ((Any?) -> Void)) {
+    func get(url _: String, credentials _: Credentials, callback: @escaping ((Any?) -> Void)) {
         if validCredentials {
             let jsonString = "{\"token\":\"A_TOKEN\"}"
             let data = jsonString.data(using: String.Encoding.utf8)

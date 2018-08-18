@@ -5,9 +5,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    func application(_ application: UIApplication,
+    func application(_: UIApplication,
                      didFinishLaunchingWithOptions
-        launchOptions: [UIApplicationLaunchOptionsKey: Any]? = nil) -> Bool {
+                     _: [UIApplicationLaunchOptionsKey: Any]? = nil) -> Bool {
         disableAnimationsForTests()
         return true
     }
@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 
-    func application(_ application: UIApplication, handleOpen url: URL) -> Bool {
+    func application(_: UIApplication, handleOpen url: URL) -> Bool {
         if let interApp = buildInterAppViewController(url: url as NSURL) {
             let navigation = window?.rootViewController as? UINavigationController
             let controller = navigation?.topViewController

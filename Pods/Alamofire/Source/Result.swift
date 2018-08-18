@@ -53,7 +53,7 @@ public enum Result<Value> {
     /// Returns the associated value if the result is a success, `nil` otherwise.
     public var value: Value? {
         switch self {
-        case .success(let value):
+        case let .success(value):
             return value
         case .failure:
             return nil
@@ -65,7 +65,7 @@ public enum Result<Value> {
         switch self {
         case .success:
             return nil
-        case .failure(let error):
+        case let .failure(error):
             return error
         }
     }
@@ -93,9 +93,9 @@ extension Result: CustomDebugStringConvertible {
     /// success or failure in addition to the value or error.
     public var debugDescription: String {
         switch self {
-        case .success(let value):
+        case let .success(value):
             return "SUCCESS: \(value)"
-        case .failure(let error):
+        case let .failure(error):
             return "FAILURE: \(error)"
         }
     }
