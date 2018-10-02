@@ -23,6 +23,7 @@
 		2455BF722163672800054FFB /* RemoteLoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2455BF5A2163672800054FFB /* RemoteLoginService.swift */; };
 		2455BF752163672800054FFB /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2455BF5C2163672800054FFB /* Credentials.swift */; };
 		2455BF762163672800054FFB /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2455BF5C2163672800054FFB /* Credentials.swift */; };
+		2455BF7B216368CC00054FFB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA35E4871CE73ABC005CFE53 /* AppDelegate.swift */; };
 		477C7D70216B7CA8821C4D41 /* libPods-LoginTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 92E595383D63AC6E7D6D89B9 /* libPods-LoginTests.a */; };
 		A874B9F5F1E3935297D0239E /* libPods-Login macOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2170D0A95CFB2CCA461927E3 /* libPods-Login macOS.a */; };
 		EA129BFA1CD2381C003DBD34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA129BF91CD2381C003DBD34 /* AppDelegate.swift */; };
@@ -35,7 +36,6 @@
 		EA261B2A1CDB6DF5006AD9D6 /* LoginServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA261B291CDB6DF5006AD9D6 /* LoginServiceFactory.swift */; };
 		EA261B2C1CDB6ED7006AD9D6 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA261B2B1CDB6ED7006AD9D6 /* UITextFieldExtension.swift */; };
 		EA261B2E1CDB70C9006AD9D6 /* AlertUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA261B2D1CDB70C9006AD9D6 /* AlertUtilities.swift */; };
-		EA35E4881CE73ABC005CFE53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA35E4871CE73ABC005CFE53 /* AppDelegate.swift */; };
 		EA35E48A1CE73ABC005CFE53 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA35E4891CE73ABC005CFE53 /* LoginViewController.swift */; };
 		EA35E48C1CE73ABC005CFE53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA35E48B1CE73ABC005CFE53 /* Assets.xcassets */; };
 		EA35E48F1CE73ABC005CFE53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA35E48D1CE73ABC005CFE53 /* Main.storyboard */; };
@@ -798,8 +798,8 @@
 				EA8B0D511CE773DA001239F4 /* LoginViewController+LoginView.swift in Sources */,
 				2455BF702163672800054FFB /* LoginService.swift in Sources */,
 				2455BF722163672800054FFB /* RemoteLoginService.swift in Sources */,
+				2455BF7B216368CC00054FFB /* AppDelegate.swift in Sources */,
 				EA35E48A1CE73ABC005CFE53 /* LoginViewController.swift in Sources */,
-				EA35E4881CE73ABC005CFE53 /* AppDelegate.swift in Sources */,
 				2455BF762163672800054FFB /* Credentials.swift in Sources */,
 				2455BF6A2163672800054FFB /* LoginView.swift in Sources */,
 				EA8B0D561CE775F5001239F4 /* AlamofireLoginService.swift in Sources */,
