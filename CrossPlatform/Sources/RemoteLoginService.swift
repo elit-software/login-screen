@@ -10,7 +10,7 @@ extension RemoteLoginService {
 
     func areCredentialsValid(credentials: Credentials, delegate: LoginServiceDelegate) {
         get(url: authenticationURL, credentials: credentials) { data in
-            let token = Token(data: data as AnyObject?)
+            guard let token = Token(data: data) else { delegate.credentialsAreNotValid(); return }
             token.isEmpty ? delegate.credentialsAreNotValid() : delegate.credentialsAreValid()
         }
     }
