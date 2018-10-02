@@ -20,7 +20,7 @@ class LoginViewController: NSViewController, NSTextFieldDelegate {
         presenter?.login()
     }
 
-    override func controlTextDidChange(_: Notification) {
+    func controlTextDidChange(_: Notification) {
         username.backgroundColor = NSColor.white
         password.backgroundColor = NSColor.white
         invalidCredentials.isHidden = true
