@@ -8,7 +8,7 @@ class AlamofireLoginService: RemoteLoginService {
             "password": credentials.password
         ]
 
-        Alamofire.request(url, method: HTTPMethod.post, parameters: parameters)
+        Alamofire.request(url, method: .post, parameters: parameters)
             .validate()
             .responseJSON { callback($0.data) }
     }
