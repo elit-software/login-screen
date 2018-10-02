@@ -25,9 +25,9 @@
 import Foundation
 
 #if os(iOS) || os(watchOS) || os(tvOS)
-import MobileCoreServices
+    import MobileCoreServices
 #elseif os(macOS)
-import CoreServices
+    import CoreServices
 #endif
 
 /// Constructs `multipart/form-data` for uploads within an HTTP or HTTPS body. There are currently two ways to encode
@@ -110,8 +110,8 @@ open class MultipartFormData {
     ///
     /// - returns: The multipart form data object.
     public init() {
-        self.boundary = BoundaryGenerator.randomBoundary()
-        self.bodyParts = []
+        boundary = BoundaryGenerator.randomBoundary()
+        bodyParts = []
 
         ///
         /// The optimal read/write buffer size in bytes for input and output streams is 1024 (1KB). For more
@@ -119,7 +119,7 @@ open class MultipartFormData {
         ///   - https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/Streams/Articles/ReadingInputStreams.html
         ///
 
-        self.streamBufferSize = 1024
+        streamBufferSize = 1024
     }
 
     // MARK: - Body Parts
@@ -275,8 +275,7 @@ open class MultipartFormData {
             }
 
             bodyContentLength = fileSize.uint64Value
-        }
-        catch {
+        } catch {
             setBodyPartError(withReason: .bodyPartFileSizeQueryFailedWithError(forURL: fileURL, error: error))
             return
         }
@@ -312,8 +311,7 @@ open class MultipartFormData {
         withLength length: UInt64,
         name: String,
         fileName: String,
-        mimeType: String)
-    {
+        mimeType: String) {
         let headers = contentHeaders(withName: name, fileName: fileName, mimeType: mimeType)
         append(stream, withLength: length, headers: headers)
     }
@@ -389,10 +387,10 @@ open class MultipartFormData {
         outputStream.open()
         defer { outputStream.close() }
 
-        self.bodyParts.first?.hasInitialBoundary = true
-        self.bodyParts.last?.hasFinalBoundary = true
+        bodyParts.first?.hasInitialBoundary = true
+        bodyParts.last?.hasFinalBoundary = true
 
-        for bodyPart in self.bodyParts {
+        for bodyPart in bodyParts {
             try write(bodyPart, to: outputStream)
         }
     }
@@ -489,7 +487,7 @@ open class MultipartFormData {
 
             if bytesRead > 0 {
                 if buffer.count != bytesRead {
-                    buffer = Array(buffer[0..<bytesRead])
+                    buffer = Array(buffer[0 ..< bytesRead])
                 }
 
                 try write(&buffer, to: outputStream)
@@ -527,7 +525,7 @@ open class MultipartFormData {
             bytesToWrite -= bytesWritten
 
             if bytesToWrite > 0 {
-                buffer = Array(buffer[bytesWritten..<buffer.count])
+                buffer = Array(buffer[bytesWritten ..< buffer.count])
             }
         }
     }
@@ -537,8 +535,7 @@ open class MultipartFormData {
     private func mimeType(forPathExtension pathExtension: String) -> String {
         if
             let id = UTTypeCreatePreferredIdentifierForTag(kUTTagClassFilenameExtension, pathExtension as CFString, nil)?.takeRetainedValue(),
-            let contentType = UTTypeCopyPreferredTagWithClass(id, kUTTagClassMIMEType)?.takeRetainedValue()
-        {
+            let contentType = UTTypeCopyPreferredTagWithClass(id, kUTTagClassMIMEType)?.takeRetainedValue() {
             return contentType as String
         }
 
