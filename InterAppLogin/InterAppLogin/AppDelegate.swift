@@ -4,9 +4,9 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
-    func application(_ application: UIApplication,
+    func application(_: UIApplication,
                      didFinishLaunchingWithOptions
-        launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+                     _: [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
         disableAnimationsForTests()
         return true
     }
