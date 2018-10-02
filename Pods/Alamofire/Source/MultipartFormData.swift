@@ -1,7 +1,7 @@
 //
 //  MultipartFormData.swift
 //
-//  Copyright (c) 2014-2016 Alamofire Software Foundation (http://alamofire.org/)
+//  Copyright (c) 2014-2018 Alamofire Software Foundation (http://alamofire.org/)
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -25,9 +25,9 @@
 import Foundation
 
 #if os(iOS) || os(watchOS) || os(tvOS)
-    import MobileCoreServices
+import MobileCoreServices
 #elseif os(macOS)
-    import CoreServices
+import CoreServices
 #endif
 
 /// Constructs `multipart/form-data` for uploads within an HTTP or HTTPS body. There are currently two ways to encode
@@ -92,7 +92,7 @@ open class MultipartFormData {
     // MARK: - Properties
 
     /// The `Content-Type` header value containing the boundary used to generate the `multipart/form-data`.
-    open var contentType: String { return "multipart/form-data; boundary=\(boundary)" }
+    open lazy var contentType: String = "multipart/form-data; boundary=\(self.boundary)"
 
     /// The content length of all body parts used to generate the `multipart/form-data` not including the boundaries.
     public var contentLength: UInt64 { return bodyParts.reduce(0) { $0 + $1.bodyContentLength } }
@@ -110,8 +110,8 @@ open class MultipartFormData {
     ///
     /// - returns: The multipart form data object.
     public init() {
-        boundary = BoundaryGenerator.randomBoundary()
-        bodyParts = []
+        self.boundary = BoundaryGenerator.randomBoundary()
+        self.bodyParts = []
 
         ///
         /// The optimal read/write buffer size in bytes for input and output streams is 1024 (1KB). For more
@@ -119,7 +119,7 @@ open class MultipartFormData {
         ///   - https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/Streams/Articles/ReadingInputStreams.html
         ///
 
-        streamBufferSize = 1024
+        self.streamBufferSize = 1024
     }
 
     // MARK: - Body Parts
@@ -275,7 +275,8 @@ open class MultipartFormData {
             }
 
             bodyContentLength = fileSize.uint64Value
-        } catch {
+        }
+        catch {
             setBodyPartError(withReason: .bodyPartFileSizeQueryFailedWithError(forURL: fileURL, error: error))
             return
         }
@@ -311,7 +312,8 @@ open class MultipartFormData {
         withLength length: UInt64,
         name: String,
         fileName: String,
-        mimeType: String) {
+        mimeType: String)
+    {
         let headers = contentHeaders(withName: name, fileName: fileName, mimeType: mimeType)
         append(stream, withLength: length, headers: headers)
     }
@@ -387,10 +389,10 @@ open class MultipartFormData {
         outputStream.open()
         defer { outputStream.close() }
 
-        bodyParts.first?.hasInitialBoundary = true
-        bodyParts.last?.hasFinalBoundary = true
+        self.bodyParts.first?.hasInitialBoundary = true
+        self.bodyParts.last?.hasFinalBoundary = true
 
-        for bodyPart in bodyParts {
+        for bodyPart in self.bodyParts {
             try write(bodyPart, to: outputStream)
         }
     }
@@ -487,7 +489,7 @@ open class MultipartFormData {
 
             if bytesRead > 0 {
                 if buffer.count != bytesRead {
-                    buffer = Array(buffer[0 ..< bytesRead])
+                    buffer = Array(buffer[0..<bytesRead])
                 }
 
                 try write(&buffer, to: outputStream)
@@ -525,7 +527,7 @@ open class MultipartFormData {
             bytesToWrite -= bytesWritten
 
             if bytesToWrite > 0 {
-                buffer = Array(buffer[bytesWritten ..< buffer.count])
+                buffer = Array(buffer[bytesWritten..<buffer.count])
             }
         }
     }
@@ -535,7 +537,8 @@ open class MultipartFormData {
     private func mimeType(forPathExtension pathExtension: String) -> String {
         if
             let id = UTTypeCreatePreferredIdentifierForTag(kUTTagClassFilenameExtension, pathExtension as CFString, nil)?.takeRetainedValue(),
-            let contentType = UTTypeCopyPreferredTagWithClass(id, kUTTagClassMIMEType)?.takeRetainedValue() {
+            let contentType = UTTypeCopyPreferredTagWithClass(id, kUTTagClassMIMEType)?.takeRetainedValue()
+        {
             return contentType as String
         }
 

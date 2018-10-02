@@ -1,7 +1,7 @@
 //
 //  TaskDelegate.swift
 //
-//  Copyright (c) 2014-2016 Alamofire Software Foundation (http://alamofire.org/)
+//  Copyright (c) 2014-2018 Alamofire Software Foundation (http://alamofire.org/)
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -31,25 +31,41 @@ open class TaskDelegate: NSObject {
     // MARK: Properties
 
     /// The serial operation queue used to execute all operations after the task completes.
-    open let queue: OperationQueue
+    public let queue: OperationQueue
+
+    /// The data returned by the server.
+    public var data: Data? { return nil }
+
+    /// The error generated throughout the lifecyle of the task.
+    public var error: Error?
 
     var task: URLSessionTask? {
-        didSet { reset() }
+        set {
+            taskLock.lock(); defer { taskLock.unlock() }
+            _task = newValue
+        }
+        get {
+            taskLock.lock(); defer { taskLock.unlock() }
+            return _task
+        }
     }
-
-    var data: Data? { return nil }
-    var error: Error?
 
     var initialResponseTime: CFAbsoluteTime?
     var credential: URLCredential?
     var metrics: AnyObject? // URLSessionTaskMetrics
 
+    private var _task: URLSessionTask? {
+        didSet { reset() }
+    }
+
+    private let taskLock = NSLock()
+
     // MARK: Lifecycle
 
     init(task: URLSessionTask?) {
-        self.task = task
+        _task = task
 
-        queue = {
+        self.queue = {
             let operationQueue = OperationQueue()
 
             operationQueue.maxConcurrentOperationCount = 1
@@ -78,7 +94,8 @@ open class TaskDelegate: NSObject {
         task: URLSessionTask,
         willPerformHTTPRedirection response: HTTPURLResponse,
         newRequest request: URLRequest,
-        completionHandler: @escaping (URLRequest?) -> Void) {
+        completionHandler: @escaping (URLRequest?) -> Void)
+    {
         var redirectRequest: URLRequest? = request
 
         if let taskWillPerformHTTPRedirection = taskWillPerformHTTPRedirection {
@@ -93,7 +110,8 @@ open class TaskDelegate: NSObject {
         _ session: URLSession,
         task: URLSessionTask,
         didReceive challenge: URLAuthenticationChallenge,
-        completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
+        completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void)
+    {
         var disposition: URLSession.AuthChallengeDisposition = .performDefaultHandling
         var credential: URLCredential?
 
@@ -104,7 +122,8 @@ open class TaskDelegate: NSObject {
 
             if
                 let serverTrustPolicy = session.serverTrustPolicyManager?.serverTrustPolicy(forHost: host),
-                let serverTrust = challenge.protectionSpace.serverTrust {
+                let serverTrust = challenge.protectionSpace.serverTrust
+            {
                 if serverTrustPolicy.evaluate(serverTrust, forHost: host) {
                     disposition = .useCredential
                     credential = URLCredential(trust: serverTrust)
@@ -131,7 +150,8 @@ open class TaskDelegate: NSObject {
     func urlSession(
         _ session: URLSession,
         task: URLSessionTask,
-        needNewBodyStream completionHandler: @escaping (InputStream?) -> Void) {
+        needNewBodyStream completionHandler: @escaping (InputStream?) -> Void)
+    {
         var bodyStream: InputStream?
 
         if let taskNeedNewBodyStream = taskNeedNewBodyStream {
@@ -151,7 +171,8 @@ open class TaskDelegate: NSObject {
 
                 if
                     let downloadDelegate = self as? DownloadTaskDelegate,
-                    let resumeData = (error as NSError).userInfo[NSURLSessionDownloadTaskResumeData] as? Data {
+                    let resumeData = (error as NSError).userInfo[NSURLSessionDownloadTaskResumeData] as? Data
+                {
                     downloadDelegate.resumeData = resumeData
                 }
             }
@@ -216,7 +237,8 @@ class DataTaskDelegate: TaskDelegate, URLSessionDataDelegate {
         _ session: URLSession,
         dataTask: URLSessionDataTask,
         didReceive response: URLResponse,
-        completionHandler: @escaping (URLSession.ResponseDisposition) -> Void) {
+        completionHandler: @escaping (URLSession.ResponseDisposition) -> Void)
+    {
         var disposition: URLSession.ResponseDisposition = .allow
 
         expectedContentLength = response.expectedContentLength
@@ -231,7 +253,8 @@ class DataTaskDelegate: TaskDelegate, URLSessionDataDelegate {
     func urlSession(
         _ session: URLSession,
         dataTask: URLSessionDataTask,
-        didBecome downloadTask: URLSessionDownloadTask) {
+        didBecome downloadTask: URLSessionDownloadTask)
+    {
         dataTaskDidBecomeDownloadTask?(session, dataTask, downloadTask)
     }
 
@@ -264,7 +287,8 @@ class DataTaskDelegate: TaskDelegate, URLSessionDataDelegate {
         _ session: URLSession,
         dataTask: URLSessionDataTask,
         willCacheResponse proposedResponse: CachedURLResponse,
-        completionHandler: @escaping (CachedURLResponse?) -> Void) {
+        completionHandler: @escaping (CachedURLResponse?) -> Void)
+    {
         var cachedResponse: CachedURLResponse? = proposedResponse
 
         if let dataTaskWillCacheResponse = dataTaskWillCacheResponse {
@@ -317,34 +341,36 @@ class DownloadTaskDelegate: TaskDelegate, URLSessionDownloadDelegate {
     var downloadTaskDidResumeAtOffset: ((URLSession, URLSessionDownloadTask, Int64, Int64) -> Void)?
 
     func urlSession(
-        _: URLSession,
+        _ session: URLSession,
         downloadTask: URLSessionDownloadTask,
-        didFinishDownloadingTo location: URL) {
+        didFinishDownloadingTo location: URL)
+    {
         temporaryURL = location
 
-        if let destination = destination {
-            let result = destination(location, downloadTask.response as! HTTPURLResponse)
-            let destination = result.destinationURL
-            let options = result.options
+        guard
+            let destination = destination,
+            let response = downloadTask.response as? HTTPURLResponse
+        else { return }
 
-            do {
-                destinationURL = destination
+        let result = destination(location, response)
+        let destinationURL = result.destinationURL
+        let options = result.options
 
-                if options.contains(.removePreviousFile) {
-                    if FileManager.default.fileExists(atPath: destination.path) {
-                        try FileManager.default.removeItem(at: destination)
-                    }
-                }
+        self.destinationURL = destinationURL
 
-                if options.contains(.createIntermediateDirectories) {
-                    let directory = destination.deletingLastPathComponent()
-                    try FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true, attributes: nil)
-                }
-
-                try FileManager.default.moveItem(at: location, to: destination)
-            } catch {
-                self.error = error
+        do {
+            if options.contains(.removePreviousFile), FileManager.default.fileExists(atPath: destinationURL.path) {
+                try FileManager.default.removeItem(at: destinationURL)
             }
+
+            if options.contains(.createIntermediateDirectories) {
+                let directory = destinationURL.deletingLastPathComponent()
+                try FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)
+            }
+
+            try FileManager.default.moveItem(at: location, to: destinationURL)
+        } catch {
+            self.error = error
         }
     }
 
@@ -353,7 +379,8 @@ class DownloadTaskDelegate: TaskDelegate, URLSessionDownloadDelegate {
         downloadTask: URLSessionDownloadTask,
         didWriteData bytesWritten: Int64,
         totalBytesWritten: Int64,
-        totalBytesExpectedToWrite: Int64) {
+        totalBytesExpectedToWrite: Int64)
+    {
         if initialResponseTime == nil { initialResponseTime = CFAbsoluteTimeGetCurrent() }
 
         if let downloadTaskDidWriteData = downloadTaskDidWriteData {
@@ -378,7 +405,8 @@ class DownloadTaskDelegate: TaskDelegate, URLSessionDownloadDelegate {
         _ session: URLSession,
         downloadTask: URLSessionDownloadTask,
         didResumeAtOffset fileOffset: Int64,
-        expectedTotalBytes: Int64) {
+        expectedTotalBytes: Int64)
+    {
         if let downloadTaskDidResumeAtOffset = downloadTaskDidResumeAtOffset {
             downloadTaskDidResumeAtOffset(session, downloadTask, fileOffset, expectedTotalBytes)
         } else {
@@ -420,7 +448,8 @@ class UploadTaskDelegate: DataTaskDelegate {
         task: URLSessionTask,
         didSendBodyData bytesSent: Int64,
         totalBytesSent: Int64,
-        totalBytesExpectedToSend: Int64) {
+        totalBytesExpectedToSend: Int64)
+    {
         if initialResponseTime == nil { initialResponseTime = CFAbsoluteTimeGetCurrent() }
 
         if let taskDidSendBodyData = taskDidSendBodyData {

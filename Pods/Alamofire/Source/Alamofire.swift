@@ -1,7 +1,7 @@
 //
 //  Alamofire.swift
 //
-//  Copyright (c) 2014-2016 Alamofire Software Foundation (http://alamofire.org/)
+//  Copyright (c) 2014-2018 Alamofire Software Foundation (http://alamofire.org/)
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -53,7 +53,7 @@ extension URL: URLConvertible {
 }
 
 extension URLComponents: URLConvertible {
-    /// Returns a URL if `url` is not nil, otherise throws an `Error`.
+    /// Returns a URL if `url` is not nil, otherwise throws an `Error`.
     ///
     /// - throws: An `AFError.invalidURL` if `url` is `nil`.
     ///
@@ -135,7 +135,8 @@ public func request(
     parameters: Parameters? = nil,
     encoding: ParameterEncoding = URLEncoding.default,
     headers: HTTPHeaders? = nil)
-    -> DataRequest {
+    -> DataRequest
+{
     return SessionManager.default.request(
         url,
         method: method,
@@ -182,7 +183,8 @@ public func download(
     encoding: ParameterEncoding = URLEncoding.default,
     headers: HTTPHeaders? = nil,
     to destination: DownloadRequest.DownloadFileDestination? = nil)
-    -> DownloadRequest {
+    -> DownloadRequest
+{
     return SessionManager.default.download(
         url,
         method: method,
@@ -207,7 +209,8 @@ public func download(
 public func download(
     _ urlRequest: URLRequestConvertible,
     to destination: DownloadRequest.DownloadFileDestination? = nil)
-    -> DownloadRequest {
+    -> DownloadRequest
+{
     return SessionManager.default.download(urlRequest, to: destination)
 }
 
@@ -219,6 +222,13 @@ public func download(
 /// If `destination` is not specified, the contents will remain in the temporary location determined by the
 /// underlying URL session.
 ///
+/// On the latest release of all the Apple platforms (iOS 10, macOS 10.12, tvOS 10, watchOS 3), `resumeData` is broken
+/// on background URL session configurations. There's an underlying bug in the `resumeData` generation logic where the
+/// data is written incorrectly and will always fail to resume the download. For more information about the bug and
+/// possible workarounds, please refer to the following Stack Overflow post:
+///
+///    - http://stackoverflow.com/a/39347461/1342462
+///
 /// - parameter resumeData:  The resume data. This is an opaque data blob produced by `URLSessionDownloadTask`
 ///                          when a task is cancelled. See `URLSession -downloadTask(withResumeData:)` for additional
 ///                          information.
@@ -229,7 +239,8 @@ public func download(
 public func download(
     resumingWith resumeData: Data,
     to destination: DownloadRequest.DownloadFileDestination? = nil)
-    -> DownloadRequest {
+    -> DownloadRequest
+{
     return SessionManager.default.download(resumingWith: resumeData, to: destination)
 }
 
@@ -252,7 +263,8 @@ public func upload(
     to url: URLConvertible,
     method: HTTPMethod = .post,
     headers: HTTPHeaders? = nil)
-    -> UploadRequest {
+    -> UploadRequest
+{
     return SessionManager.default.upload(fileURL, to: url, method: method, headers: headers)
 }
 
@@ -285,7 +297,8 @@ public func upload(
     to url: URLConvertible,
     method: HTTPMethod = .post,
     headers: HTTPHeaders? = nil)
-    -> UploadRequest {
+    -> UploadRequest
+{
     return SessionManager.default.upload(data, to: url, method: method, headers: headers)
 }
 
@@ -318,7 +331,8 @@ public func upload(
     to url: URLConvertible,
     method: HTTPMethod = .post,
     headers: HTTPHeaders? = nil)
-    -> UploadRequest {
+    -> UploadRequest
+{
     return SessionManager.default.upload(stream, to: url, method: method, headers: headers)
 }
 
@@ -365,7 +379,8 @@ public func upload(
     to url: URLConvertible,
     method: HTTPMethod = .post,
     headers: HTTPHeaders? = nil,
-    encodingCompletion: ((SessionManager.MultipartFormDataEncodingResult) -> Void)?) {
+    encodingCompletion: ((SessionManager.MultipartFormDataEncodingResult) -> Void)?)
+{
     return SessionManager.default.upload(
         multipartFormData: multipartFormData,
         usingThreshold: encodingMemoryThreshold,
@@ -401,7 +416,8 @@ public func upload(
     multipartFormData: @escaping (MultipartFormData) -> Void,
     usingThreshold encodingMemoryThreshold: UInt64 = SessionManager.multipartFormDataEncodingMemoryThreshold,
     with urlRequest: URLRequestConvertible,
-    encodingCompletion: ((SessionManager.MultipartFormDataEncodingResult) -> Void)?) {
+    encodingCompletion: ((SessionManager.MultipartFormDataEncodingResult) -> Void)?)
+{
     return SessionManager.default.upload(
         multipartFormData: multipartFormData,
         usingThreshold: encodingMemoryThreshold,
@@ -412,36 +428,38 @@ public func upload(
 
 #if !os(watchOS)
 
-    // MARK: - Stream Request
+// MARK: - Stream Request
 
-    // MARK: Hostname and Port
+// MARK: Hostname and Port
 
-    /// Creates a `StreamRequest` using the default `SessionManager` for bidirectional streaming with the `hostname`
-    /// and `port`.
-    ///
-    /// If `startRequestsImmediately` is `true`, the request will have `resume()` called before being returned.
-    ///
-    /// - parameter hostName: The hostname of the server to connect to.
-    /// - parameter port:     The port of the server to connect to.
-    ///
-    /// - returns: The created `StreamRequest`.
-    @discardableResult
-    public func stream(withHostName hostName: String, port: Int) -> StreamRequest {
-        return SessionManager.default.stream(withHostName: hostName, port: port)
-    }
+/// Creates a `StreamRequest` using the default `SessionManager` for bidirectional streaming with the `hostname`
+/// and `port`.
+///
+/// If `startRequestsImmediately` is `true`, the request will have `resume()` called before being returned.
+///
+/// - parameter hostName: The hostname of the server to connect to.
+/// - parameter port:     The port of the server to connect to.
+///
+/// - returns: The created `StreamRequest`.
+@discardableResult
+@available(iOS 9.0, macOS 10.11, tvOS 9.0, *)
+public func stream(withHostName hostName: String, port: Int) -> StreamRequest {
+    return SessionManager.default.stream(withHostName: hostName, port: port)
+}
 
-    // MARK: NetService
+// MARK: NetService
 
-    /// Creates a `StreamRequest` using the default `SessionManager` for bidirectional streaming with the `netService`.
-    ///
-    /// If `startRequestsImmediately` is `true`, the request will have `resume()` called before being returned.
-    ///
-    /// - parameter netService: The net service used to identify the endpoint.
-    ///
-    /// - returns: The created `StreamRequest`.
-    @discardableResult
-    public func stream(with netService: NetService) -> StreamRequest {
-        return SessionManager.default.stream(with: netService)
-    }
+/// Creates a `StreamRequest` using the default `SessionManager` for bidirectional streaming with the `netService`.
+///
+/// If `startRequestsImmediately` is `true`, the request will have `resume()` called before being returned.
+///
+/// - parameter netService: The net service used to identify the endpoint.
+///
+/// - returns: The created `StreamRequest`.
+@discardableResult
+@available(iOS 9.0, macOS 10.11, tvOS 9.0, *)
+public func stream(with netService: NetService) -> StreamRequest {
+    return SessionManager.default.stream(with: netService)
+}
 
 #endif
