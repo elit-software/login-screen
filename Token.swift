@@ -1,11 +1,8 @@
-struct Token {
+struct Token: Codable {
 
     let token: String
 
     var isEmpty: Bool {
         return token.isEmpty
     }
-}
-
-extension Token: Codable {
 }
