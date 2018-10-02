@@ -20,7 +20,7 @@ class InterAppViewController: UIViewController {
     }
 
     func initLoadingInterface() {
-        let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+        let activityIndicator = UIActivityIndicatorView(style: .gray)
         view.addSubview(activityIndicator)
         self.activityIndicator = activityIndicator
         self.activityIndicator?.startAnimating()

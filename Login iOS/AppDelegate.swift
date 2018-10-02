@@ -6,8 +6,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_: UIApplication,
-                     didFinishLaunchingWithOptions
-                     _: [UIApplicationLaunchOptionsKey: Any]? = nil) -> Bool {
+                     didFinishLaunchingWithOptions _:
+                         [UIApplication.LaunchOptionsKey: Any]? = nil) -> Bool {
         disableAnimationsForTests()
         return true
     }
