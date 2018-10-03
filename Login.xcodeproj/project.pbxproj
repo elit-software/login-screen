@@ -113,10 +113,10 @@
 		EA129C001CD2381C003DBD34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA129C031CD2381C003DBD34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA129C051CD2381C003DBD34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EA129C0A1CD2381C003DBD34 /* LoginTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoginTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA129C0A1CD2381C003DBD34 /* Unit Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unit Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA129C0E1CD2381C003DBD34 /* LoginPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = LoginPresenterTests.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		EA129C101CD2381C003DBD34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EA129C151CD2381C003DBD34 /* LoginUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoginUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA129C151CD2381C003DBD34 /* iOS UI Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS UI Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA129C191CD2381C003DBD34 /* LoginUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUITests.swift; sourceTree = "<group>"; };
 		EA129C1B1CD2381C003DBD34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA261B291CDB6DF5006AD9D6 /* LoginServiceFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginServiceFactory.swift; sourceTree = "<group>"; };
@@ -128,7 +128,7 @@
 		EA35E48B1CE73ABC005CFE53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA35E48E1CE73ABC005CFE53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EA35E4901CE73ABC005CFE53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EA35E4951CE73ABC005CFE53 /* Login macOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Login macOSUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA35E4951CE73ABC005CFE53 /* macOS UI Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "macOS UI Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA35E4991CE73ABC005CFE53 /* LoginUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUITests.swift; sourceTree = "<group>"; };
 		EA35E49B1CE73ABC005CFE53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA3972111CDA22A600E7898E /* LoginServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginServiceTests.swift; sourceTree = "<group>"; };
@@ -280,10 +280,10 @@
 			isa = PBXGroup;
 			children = (
 				EA129BF61CD2381C003DBD34 /* Login.app */,
-				EA129C0A1CD2381C003DBD34 /* LoginTests.xctest */,
-				EA129C151CD2381C003DBD34 /* LoginUITests.xctest */,
+				EA129C0A1CD2381C003DBD34 /* Unit Tests.xctest */,
+				EA129C151CD2381C003DBD34 /* iOS UI Tests.xctest */,
 				EA35E4851CE73ABC005CFE53 /* Login macOS.app */,
-				EA35E4951CE73ABC005CFE53 /* Login macOSUITests.xctest */,
+				EA35E4951CE73ABC005CFE53 /* macOS UI Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -481,9 +481,9 @@
 			productReference = EA129BF61CD2381C003DBD34 /* Login.app */;
 			productType = "com.apple.product-type.application";
 		};
-		EA129C091CD2381C003DBD34 /* LoginTests */ = {
+		EA129C091CD2381C003DBD34 /* Unit Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EA129C211CD2381C003DBD34 /* Build configuration list for PBXNativeTarget "LoginTests" */;
+			buildConfigurationList = EA129C211CD2381C003DBD34 /* Build configuration list for PBXNativeTarget "Unit Tests" */;
 			buildPhases = (
 				781E1A76AB3DCE6C58D50555 /* [CP] Check Pods Manifest.lock */,
 				EA129C061CD2381C003DBD34 /* Sources */,
@@ -495,14 +495,14 @@
 			dependencies = (
 				EA129C0C1CD2381C003DBD34 /* PBXTargetDependency */,
 			);
-			name = LoginTests;
+			name = "Unit Tests";
 			productName = LoginTests;
-			productReference = EA129C0A1CD2381C003DBD34 /* LoginTests.xctest */;
+			productReference = EA129C0A1CD2381C003DBD34 /* Unit Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		EA129C141CD2381C003DBD34 /* LoginUITests */ = {
+		EA129C141CD2381C003DBD34 /* iOS UI Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EA129C241CD2381C003DBD34 /* Build configuration list for PBXNativeTarget "LoginUITests" */;
+			buildConfigurationList = EA129C241CD2381C003DBD34 /* Build configuration list for PBXNativeTarget "iOS UI Tests" */;
 			buildPhases = (
 				EA129C111CD2381C003DBD34 /* Sources */,
 				EA129C121CD2381C003DBD34 /* Frameworks */,
@@ -513,9 +513,9 @@
 			dependencies = (
 				EA129C171CD2381C003DBD34 /* PBXTargetDependency */,
 			);
-			name = LoginUITests;
+			name = "iOS UI Tests";
 			productName = LoginUITests;
-			productReference = EA129C151CD2381C003DBD34 /* LoginUITests.xctest */;
+			productReference = EA129C151CD2381C003DBD34 /* iOS UI Tests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 		EA35E4841CE73ABC005CFE53 /* Login macOS */ = {
@@ -536,9 +536,9 @@
 			productReference = EA35E4851CE73ABC005CFE53 /* Login macOS.app */;
 			productType = "com.apple.product-type.application";
 		};
-		EA35E4941CE73ABC005CFE53 /* Login macOSUITests */ = {
+		EA35E4941CE73ABC005CFE53 /* macOS UI Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EA35E49F1CE73ABC005CFE53 /* Build configuration list for PBXNativeTarget "Login macOSUITests" */;
+			buildConfigurationList = EA35E49F1CE73ABC005CFE53 /* Build configuration list for PBXNativeTarget "macOS UI Tests" */;
 			buildPhases = (
 				EA35E4911CE73ABC005CFE53 /* Sources */,
 				EA35E4921CE73ABC005CFE53 /* Frameworks */,
@@ -549,9 +549,9 @@
 			dependencies = (
 				EA35E4971CE73ABC005CFE53 /* PBXTargetDependency */,
 			);
-			name = "Login macOSUITests";
+			name = "macOS UI Tests";
 			productName = "Login macOSUITests";
-			productReference = EA35E4951CE73ABC005CFE53 /* Login macOSUITests.xctest */;
+			productReference = EA35E4951CE73ABC005CFE53 /* macOS UI Tests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -602,10 +602,10 @@
 			projectRoot = "";
 			targets = (
 				EA129BF51CD2381C003DBD34 /* Login */,
-				EA129C091CD2381C003DBD34 /* LoginTests */,
-				EA129C141CD2381C003DBD34 /* LoginUITests */,
 				EA35E4841CE73ABC005CFE53 /* Login macOS */,
-				EA35E4941CE73ABC005CFE53 /* Login macOSUITests */,
+				EA129C091CD2381C003DBD34 /* Unit Tests */,
+				EA129C141CD2381C003DBD34 /* iOS UI Tests */,
+				EA35E4941CE73ABC005CFE53 /* macOS UI Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -1130,7 +1130,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EA129C211CD2381C003DBD34 /* Build configuration list for PBXNativeTarget "LoginTests" */ = {
+		EA129C211CD2381C003DBD34 /* Build configuration list for PBXNativeTarget "Unit Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA129C221CD2381C003DBD34 /* Debug */,
@@ -1139,7 +1139,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EA129C241CD2381C003DBD34 /* Build configuration list for PBXNativeTarget "LoginUITests" */ = {
+		EA129C241CD2381C003DBD34 /* Build configuration list for PBXNativeTarget "iOS UI Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA129C251CD2381C003DBD34 /* Debug */,
@@ -1157,7 +1157,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EA35E49F1CE73ABC005CFE53 /* Build configuration list for PBXNativeTarget "Login macOSUITests" */ = {
+		EA35E49F1CE73ABC005CFE53 /* Build configuration list for PBXNativeTarget "macOS UI Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EA35E4A01CE73ABC005CFE53 /* Debug */,

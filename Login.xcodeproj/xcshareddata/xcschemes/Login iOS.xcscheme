@@ -34,8 +34,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "EA129C091CD2381C003DBD34"
-               BuildableName = "LoginTests.xctest"
-               BlueprintName = "LoginTests"
+               BuildableName = "Unit Tests.xctest"
+               BlueprintName = "Unit Tests"
                ReferencedContainer = "container:Login.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -44,8 +44,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "EA129C141CD2381C003DBD34"
-               BuildableName = "LoginUITests.xctest"
-               BlueprintName = "LoginUITests"
+               BuildableName = "iOS UI Tests.xctest"
+               BlueprintName = "iOS UI Tests"
                ReferencedContainer = "container:Login.xcodeproj">
             </BuildableReference>
          </TestableReference>

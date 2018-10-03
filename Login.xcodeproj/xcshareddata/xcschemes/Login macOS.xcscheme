@@ -33,8 +33,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "EA35E4941CE73ABC005CFE53"
-               BuildableName = "Login macOSUITests.xctest"
-               BlueprintName = "Login macOSUITests"
+               BuildableName = "macOS UI Tests.xctest"
+               BlueprintName = "macOS UI Tests"
                ReferencedContainer = "container:Login.xcodeproj">
             </BuildableReference>
          </TestableReference>
